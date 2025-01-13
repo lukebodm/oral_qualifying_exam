@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,350,350i,400,400i&display=swap');
+
+/* Define font families */
+:root {
+  --font-family-sans-serif: "Roboto", sans-serif;
+  --presentation-heading-font: "Roboto", sans-serif;
+
+  /* Define presentation styles */
+  --presentation-heading-color: #121111; /* Replace $jet with the appropriate hex value */
+  --presentation-heading-font-weight: lighter;
+  --presentation-font-size-root: 32px;
+
+  /* Colors */
+  --body-color: #121111; /* Replace $jet with the appropriate hex value */
+  --link-color: #0056b3; /* Replace $accent with the appropriate hex value */
+  --selection-bg: #121111;
+}
+
+/* Apply font families */
+body {
+  font-family: var(--font-family-sans-serif);
+  color: var(--body-color);
+  font-weight: lighter;
+}
+
+table {
+  font-family: var(--font-family-sans-serif);
+  color: var(--body-color);
+  font-weight: lighter;
+  border: solid 1px;
+}
+
+td { width: 50%};
+
+.reveal a {
+  font-family: var(--font-family-sans-serif);
+  color: var(--body-color);
+  font-weight: lighter;
+}
+
+.reveal p {
+  font-family: var(--font-family-sans-serif); /* Ensure Roboto font is applied */
+  color: var(--body-color);
+  font-weight: lighter;
+}
+.reveal li {
+  font-family: var(--font-family-sans-serif); /* Ensure Roboto font is applied */
+  color: var(--body-color);
+  font-weight: lighter;
+}
+
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  color: var(--body-color);
+  font-family: "Roboto", Impact, sans-serif;
+  line-height: 0.9em;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: lighter;
+}
+
+.reveal h1 {
+  font-family: var(--font-family-sans-serif); /* Ensure Roboto font is applied */
+  color: var(--body-color);
+  font-weight: lighter;
+  padding-bottom: 1em;
+}
+
+.reveal ul {
+  list-style-type: none; /* Remove default bullet */
+
+}
+ul {
+    list-style-type: none; /* Remove default bullet */
+}
+.reveal ul li::before {
+    content: "•"; /* Custom bullet */
+    margin-right: 0.5em; /* Add space after bullet */
+    color: inherit; /* Match the text color */
+    font-size: 1em; /* Match the text size (adjust if needed) */
+}
+
+.csl-bib-body{
+    font-size: 0.5em;
+    text-align: left;
+}
+
+.MathJax {
+    font-weight: lighter !important;
+}

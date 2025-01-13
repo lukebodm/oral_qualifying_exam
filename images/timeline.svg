@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="370.41666mm"
+   height="264.58334mm"
+   viewBox="0 0 370.41666 264.58334"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   sodipodi:docname="timeline.svg"
+   inkscape:export-filename="timeline.png"
+   inkscape:export-xdpi="180"
+   inkscape:export-ydpi="180"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.84100811"
+     inkscape:cx="454.21679"
+     inkscape:cy="501.18423"
+     inkscape:window-width="1910"
+     inkscape:window-height="1048"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showgrid="false" />
+  <defs
+     id="defs1">
+    <rect
+       x="38.669529"
+       y="378.01156"
+       width="525.1858"
+       height="160.18697"
+       id="rect10" />
+    <rect
+       x="722.58497"
+       y="835.65463"
+       width="170.78165"
+       height="80.518276"
+       id="rect7" />
+    <rect
+       x="742.84645"
+       y="567.66107"
+       width="509.06949"
+       height="123.86202"
+       id="rect4" />
+    <rect
+       x="76.182979"
+       y="749.13263"
+       width="525.51549"
+       height="197.16918"
+       id="rect3" />
+    <rect
+       x="86.068768"
+       y="691.55201"
+       width="552.55322"
+       height="108.02113"
+       id="rect2" />
+    <rect
+       x="742.19615"
+       y="820.52707"
+       width="535.1291"
+       height="217.50226"
+       id="rect1" />
+    <marker
+       style="overflow:visible"
+       id="Stop"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Stop"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1"
+         d="M 0,4 V -4"
+         id="path23" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <rect
+       x="722.58496"
+       y="835.6546"
+       width="170.78165"
+       height="80.518272"
+       id="rect7-2" />
+    <rect
+       x="722.58496"
+       y="835.6546"
+       width="170.78165"
+       height="80.518272"
+       id="rect7-7" />
+    <rect
+       x="722.58496"
+       y="835.6546"
+       width="170.78165"
+       height="80.518272"
+       id="rect7-2-4" />
+    <rect
+       x="742.84644"
+       y="567.66107"
+       width="518.54614"
+       height="163.52919"
+       id="rect4-0" />
+    <rect
+       x="722.58496"
+       y="835.6546"
+       width="170.78165"
+       height="80.518272"
+       id="rect7-7-6" />
+    <rect
+       x="742.84644"
+       y="567.66107"
+       width="507.73746"
+       height="136.99895"
+       id="rect4-0-7" />
+    <rect
+       x="722.58496"
+       y="835.6546"
+       width="170.78165"
+       height="80.518272"
+       id="rect7-7-6-4" />
+    <rect
+       x="722.58496"
+       y="835.6546"
+       width="170.78165"
+       height="80.518272"
+       id="rect7-2-4-9" />
+    <rect
+       x="38.669529"
+       y="378.01157"
+       width="537.31599"
+       height="208.96607"
+       id="rect10-2" />
+    <rect
+       x="76.182976"
+       y="749.13263"
+       width="517.64124"
+       height="184.29096"
+       id="rect3-7" />
+    <rect
+       x="722.58496"
+       y="835.6546"
+       width="170.78165"
+       height="80.518272"
+       id="rect7-2-5" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#0d1117;fill-opacity:0.992157;stroke:#000000;stroke-width:0.965;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Stop);marker-end:url(#Triangle)"
+       d="M 184.92394,8.7142342 V 251.09418"
+       id="path1" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,34.620854,-43.027106)"
+       id="text1"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:32px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect1);display:inline;fill:#121110;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
+         x="742.19531"
+         y="848.52734"
+         id="tspan2">Human Brain Imaging by </tspan><tspan
+         x="742.19531"
+         y="888.52734"
+         id="tspan3">Electromagnetic Tomography: A </tspan><tspan
+         x="742.19531"
+         y="928.52734"
+         id="tspan5">Mobile Brain Scanner for Clinical </tspan><tspan
+         x="742.19531"
+         y="968.52734"
+         id="tspan11">Settings (<tspan
+   style="font-style:italic"
+   id="tspan6">Henriksson and Sahebdivan</tspan>)</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text2"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:24px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect2);display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-16.824094,-50.882457)"
+       id="text3"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:32px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect3);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
+         x="76.183594"
+         y="777.13281"
+         id="tspan13">Numerical ultrasonic full waveform </tspan><tspan
+         x="76.183594"
+         y="817.13281"
+         id="tspan24">inversion (FWI) for complex </tspan><tspan
+         x="76.183594"
+         y="857.13281"
+         id="tspan25">structures in coupled 2D solid/fluid </tspan><tspan
+         x="76.183594"
+         y="897.13281"
+         id="tspan27">media (<tspan
+   style="font-style:italic"
+   id="tspan26">He and Rao</tspan>)</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,34.717489,-29.015485)"
+       id="text4"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect4);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
+         x="742.8457"
+         y="595.97266"
+         id="tspan32"><tspan
+           style="font-weight:300;font-family:Roboto;-inkscape-font-specification:'Roboto Light';fill:#121110"
+           id="tspan28">Full-Waveform Inversion Imaging of </tspan></tspan><tspan
+         x="742.8457"
+         y="636.28516"
+         id="tspan37"><tspan
+           style="font-weight:300;font-family:Roboto;-inkscape-font-specification:'Roboto Light';fill:#121110"
+           id="tspan34">the Human Brain (</tspan><tspan
+           style="font-style:italic"
+           id="tspan36">Guasch and </tspan></tspan><tspan
+         x="742.8457"
+         y="676.59766"
+         id="tspan48"><tspan
+           style="font-style:italic"
+           id="tspan40">Oscar</tspan><tspan
+           style="font-weight:300;font-family:Roboto;-inkscape-font-specification:'Roboto Light';fill:#121110"
+           id="tspan41">)</tspan><tspan
+           style="font-weight:normal;-inkscape-font-specification:'Sans, Normal'"
+           id="tspan43"> </tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,8.6127241,-30.84583)"
+       id="text7"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect7);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
+         x="722.58594"
+         y="872.98766"
+         id="tspan51"><tspan
+           style="font-size:42.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#121110"
+           id="tspan50">2022</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-47.94355,-59.20342)"
+       id="text7-6"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect7-2);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
+         x="722.58594"
+         y="872.98766"
+         id="tspan53"><tspan
+           style="font-size:42.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#121110"
+           id="tspan52">2021</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-47.946285,-118.75672)"
+       id="text7-6-3"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect7-2-4);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
+         x="722.58594"
+         y="872.98766"
+         id="tspan55"><tspan
+           style="font-size:42.6667px;font-family:Roboto;-inkscape-font-specification:Roboto"
+           id="tspan54">2018</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,8.4916129,-90.15577)"
+       id="text7-3"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect7-7);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
+         x="722.58594"
+         y="872.98766"
+         id="tspan57"><tspan
+           style="font-size:42.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#121110"
+           id="tspan56">2020</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,34.552124,-93.608773)"
+       id="text4-7"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect4-0);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
+         x="742.8457"
+         y="595.97266"
+         id="tspan59"><tspan
+           style="font-weight:300;font-family:Roboto;-inkscape-font-specification:'Roboto Light';fill:#121110"
+           id="tspan58">Ultrasonic computed tomography </tspan></tspan><tspan
+         x="742.8457"
+         y="636.28516"
+         id="tspan61"><tspan
+           style="font-weight:300;font-family:Roboto;-inkscape-font-specification:'Roboto Light';fill:#121110"
+           id="tspan60">based on full-waveform inversion for </tspan></tspan><tspan
+         x="742.8457"
+         y="676.59766"
+         id="tspan63"><tspan
+           style="font-weight:300;font-family:Roboto;-inkscape-font-specification:'Roboto Light';fill:#121110"
+           id="tspan62">bone quantitative imaging (Bernard </tspan></tspan><tspan
+         x="742.8457"
+         y="716.91016"
+         id="tspan65"><tspan
+   style="font-weight:300;font-family:Roboto;-inkscape-font-specification:'Roboto Light';fill:#121110"
+   id="tspan64">and Monteillier)</tspan>
+</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,6.1856596,-149.46571)"
+       id="text7-3-7"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect7-7-6);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
+         x="722.58594"
+         y="872.98766"
+         id="tspan67"><tspan
+           style="font-size:42.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#121110"
+           id="tspan66">2017</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,34.597599,-147.79212)"
+       id="text4-7-3"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:32px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect4-0-7);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
+         x="742.8457"
+         y="595.66016"
+         id="tspan68">The seismic inverse problem as a </tspan><tspan
+         x="742.8457"
+         y="635.66016"
+         id="tspan69">sequence of before stack </tspan><tspan
+         x="742.8457"
+         y="675.66016"
+         id="tspan71">migrations (<tspan
+   style="font-style:italic"
+   id="tspan70">Lailly and Bednar</tspan>)
+</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,6.094709,-208.77565)"
+       id="text7-3-7-8"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect7-7-6-4);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
+         x="722.58594"
+         y="872.98766"
+         id="tspan72">1983</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-10.746946,-3.726857)"
+       id="text10"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect10);shape-padding:8.59177;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:4.40315;stroke-dasharray:none;stroke-opacity:1"><tspan
+         x="47.261719"
+         y="414.91602"
+         id="tspan74"><tspan
+           style="font-weight:300;font-family:Roboto;-inkscape-font-specification:'Roboto Light';fill:#121110"
+           id="tspan73">3D Imaging of the Breast Using Full-</tspan></tspan><tspan
+         x="47.261719"
+         y="455.22852"
+         id="tspan78"><tspan
+           style="font-weight:300;font-family:Roboto;-inkscape-font-specification:'Roboto Light';fill:#121110"
+           id="tspan75">Waveform inversion (</tspan><tspan
+           style="font-style:italic"
+           id="tspan76">Oscar</tspan><tspan
+           style="font-weight:300;font-family:Roboto;-inkscape-font-specification:'Roboto Light';fill:#121110"
+           id="tspan77">)</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-47.935261,-178.31002)"
+       id="text7-6-3-6"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect7-2-4-9);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
+         x="722.58594"
+         y="872.98766"
+         id="tspan79">2000</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-10.052546,-73.938254)"
+       id="text10-8"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:32px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect10-2);shape-padding:8.59177;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:4.40315;stroke-dasharray:none;stroke-opacity:1"><tspan
+         x="47.261719"
+         y="414.60352"
+         id="tspan80">Reflection waveform inversion using </tspan><tspan
+         x="47.261719"
+         y="454.60352"
+         id="tspan81">local descent methods: Estimating </tspan><tspan
+         x="47.261719"
+         y="494.60352"
+         id="tspan82">attenuation and velocity over a gas-</tspan><tspan
+         x="47.261719"
+         y="534.60352"
+         id="tspan84">sand deposit (<tspan
+   style="font-style:italic"
+   id="tspan83">Hicks and Pratt</tspan>)</tspan></text>
+    <path
+       style="opacity:0.562176;fill:#000000;fill-opacity:0.992157;stroke:#2273bd;stroke-width:1.665;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 200.20498,202.97169 24.22197,6e-4"
+       id="path2" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-15.95748,5.7442257)"
+       id="text3-5"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:32px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect3-7);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
+         x="76.183594"
+         y="777.13281"
+         id="tspan85">Dual-Probe Transcranial Full-</tspan><tspan
+         x="76.183594"
+         y="817.13281"
+         id="tspan86">Waveform Inversion: A Brain </tspan><tspan
+         x="76.183594"
+         y="857.13281"
+         id="tspan88">Phantom Feasibility Study (<tspan
+   style="font-style:italic"
+   id="tspan87">Robins </tspan></tspan><tspan
+         x="76.183594"
+         y="897.13281"
+         id="tspan90"><tspan
+   style="font-style:italic"
+   id="tspan89">and Guasch</tspan>)
+</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-47.888407,-3.0533415)"
+       id="text7-6-6"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect7-2-5);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
+         x="722.58594"
+         y="872.98766"
+         id="tspan92"><tspan
+           style="font-size:42.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#121110"
+           id="tspan91">2023</tspan></tspan></text>
+    <path
+       style="opacity:0.562176;fill:#000000;fill-opacity:0.992157;stroke:#2273bd;stroke-width:1.665;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 143.97299,230.04132 24.22197,6e-4"
+       id="path2-0-2" />
+    <path
+       style="opacity:0.562176;fill:#000000;fill-opacity:0.992157;stroke:#2273bd;stroke-width:1.665;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 200.20498,143.46806 24.22197,6e-4"
+       id="path2-1" />
+  </g>
+</svg>

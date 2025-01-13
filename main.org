@@ -1,0 +1,618 @@
+#+OPTIONS: toc:nil num:nil date:nil
+#+OPTIONS: reveal_width:1400 reveal_height:1000
+#+OPTIONS: \n:t
+#+REVEAL_THEME: white 
+#+REVEAL_TRANS: slide
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js@4.6.0
+#+REVEAL_VERSION: 4
+#+REVEAL_EXTRA_CSS: ./custom.css
+#+REVEAL_TITLE_SLIDE: <h1>%t</h1><h3>%A %a</h3>
+#+bibliography: references.bib
+#+cite_export: csl ./citation-style.csl
+#+LATEX_HEADER: \usepackage{tikz}
+#+Title: Affordable, Scalable, Open Source Medical Imaging Technology
+#+Author: Luke Bodmer 
+
+* Overview
+- Understanding the technology
+- Vision for the project
+- Literature review
+- Specifics of my implementation
+- Where to go from here
+  
+* Understanding the Technology 
+#+attr_reveal: :frag t
+#+attr_reveal: :frag_idx 5 
+/Model-Based Inverse Problem Solving/
+
+#+REVEAL_HTML: <div style="display: grid; grid-template-columns: auto auto;">
+#+REVEAL_HTML: <div>
+#+attr_reveal: :frag t
+#+attr_reveal: :frag_idx 1 
+#+ATTR_HTML: :width 100% :align center
+[[./images/three-main-parts-experiment.png]]
+#+attr_reveal: :frag t
+#+attr_reveal: :frag_idx 3 
+#+ATTR_HTML: :width 100% :align center
+[[./images/three-main-parts-neural-net.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div>
+#+attr_reveal: :frag t
+#+attr_reveal: :frag_idx 2 
+#+ATTR_HTML: :width 100% :align center
+[[./images/three-main-parts-simulation.png]]
+
+#+attr_reveal: :frag t
+#+attr_reveal: :frag_idx 4 
+#+ATTR_HTML: :width 100% :align center
+[[./images/three-main-parts-optimization.png]]
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+
+#+BEGIN_NOTES
+- AKA Simulation-based inference
+- Simulation-Based Parameter Inversion
+- Iterative Inverse Solving
+- What is inferred is the simulator parameters that are likely to have generated that data
+- In theory we can find any parameters that we can put in a simulation. Not just permittivity, permeability, and conductivity, but also stress tensors, elasticity parameters, heat capacities, non-linear coefficients, whatever we can think of...
+- The more data the better, to help combat the ill-posed nature of the problem
+- data driven
+- physics constrained
+- Used in Non-destructure testing
+- Used in Geophysical imaging
+#+END_NOTES
+
+* Simulation 
+#+ATTR_HTML: :width 75% :align center
+[[./Ez_animation.gif]]
+ #+BEGIN_NOTES
+- Relative epsilon value (permittivity)
+- Relative mu value (permeability)
+ #+END_NOTES
+ 
+** Importance of Visualization
+#+begin_quote
+We are entering a new era where 3D images, visualizations, and animations will begin to extend, and in some cases, replace the current communication paradigm based on words, mathematical symbols, and 2D images. Our hope is that along the way the human imagination will be freed like never before."
+-- The Visualization Toolkit Documentation 
+#+end_quote
+
+* Simulation
+#+REVEAL_HTML: <br>
+#+ATTR_HTML: :width 100% :align center
+[[./images/data-visualization.png]]
+
+#+REVEAL_HTML: <br>
+#+attr_reveal: :frag t
+*Input*: vector length 4
+#+REVEAL_HTML: <br>
+#+attr_reveal: :frag t
+*Output*: vector length 7020
+
+** Code
+#+BEGIN_SRC python
+ def forward_problem(eps_r, mu_r, length, width, plot=False):
+    """
+    2D FDTD electromagnetic wave simulation
+    Simulates Transverse Magnetic (TM) mode field components with
+    PML boundary conditions
+    """
+
+    # physics parameters
+    c = 3e8                     # [m/s] speed of light
+    mu = np.pi*4e-7             # [H/m] vacuum permeability
+    epsilon = 1 / (mu * c**2)   # [F/m]
+
+    ...
+      
+    while t < t_final:
+        # time loop
+        ...
+
+    # Save data for training gaussian process
+    save_training_data(input_data, output_data)
+    return
+#+END_SRC
+
+* Surrogate Model
+#+ATTR_HTML: :width 75% :align center
+[[./images/neural-net.png]]
+#+BEGIN_NOTES
+- Universal approximation theorem
+- feedforward networks with non-polynomial activation functions are dense in the space of continuous functions between two Euclidean spaces, with respect to the compact convergence topology.
+- Every continuous f (x) on [0, 1] can be approximated by neural networks.
+#+END_NOTES
+** Code
+#+BEGIN_SRC python
+import torch
+
+class PinnModel(nn.Module):
+    def __init__(self):
+        super(PinnModel, self).__init__()
+        # Define layers
+        self.fc1 = nn.Linear(4, 64)     # Input layer (4 parameters to 64 neurons)
+        self.fc2 = nn.Linear(64, 128)  # Hidden layer (64 to 128 neurons)
+        self.fc3 = nn.Linear(128, 7020)  # Hidden layer (128 to 7020 neurons = 20 * 351)
+        self.fc4 = nn.Linear(7020, 7020)  # Hidden layer (7020 to 7020 neurons = 20 * 351)
+
+    def forward(self, x):
+        # Pass through layers
+        x = F.relu(self.fc1(x))  # Shape: [1, 64]
+        x = F.relu(self.fc2(x))  # Shape: [1, 128]
+        x = F.relu(self.fc3(x))  # Shape: [1, 7020]
+        x = self.fc4(x)          # Shape: [1, 7020]
+        return x
+#+END_SRC
+
+* Optimization
+#+ATTR_HTML: :width 100% :align center
+[[./images/optimization.png]]
+
+* Vision for the Project
+#+REVEAL_HTML: <div style="display: grid; grid-template-columns: auto auto;">
+#+REVEAL_HTML: <div style="font-size: 0.7em; display: grid; grid-template-columns: auto auto; align-items: center;">
+#+REVEAL_HTML: <div>
+#+REVEAL_HTML: <div style="margin-bottom: 2em; text-align: left;">
+#+REVEAL_HTML: <h2>
+Scalable
+#+REVEAL_HTML: </h2>
+
+#+REVEAL_HTML: <div style="display: grid; grid-template-columns: auto auto auto;">
+#+REVEAL_HTML: <div>
+Laptop
+Desktop
+Supercomputer
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div>
+→
+→
+→
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div>
+Text explaining the ailment
+Low resolution image
+High resolution image
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div style="margin-bottom: 2em; text-align: left;">
+#+REVEAL_HTML: <h2>
+Affordable
+#+REVEAL_HTML: </h2>
+Accessible to 99% of the population
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div style="text-align: left;">
+#+REVEAL_HTML: <h2>
+Mobile
+#+REVEAL_HTML: </h2>
+Runs in an ambulance in the middle of Appalachia
+Runs on a laptop in the middle of the Congo
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div>
+#+ATTR_HTML: :width 65% :align center
+[[./images/ai-visions.png]]
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+
+#+BEGIN_NOTES
+- [cite:@Makin2021]
+- Laptop text could read: /Ischemic stroke in the left middle cerebral artery (MCA), primarily affecting the frontal lobe./
+- 
+#+END_NOTES
+* 
+#+REVEAL_HTML: <div style="display: grid; grid-template-columns: auto auto;">
+#+REVEAL_HTML: <div>
+#+REVEAL_HTML: <h2>
+Advantages
+#+REVEAL_HTML: </h2>
+- Cost-effective
+- Mobile 
+- Non-ionizing radiation
+- Sensitive to dielectric properties
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div>
+#+REVEAL_HTML: <h2>
+Challenges
+#+REVEAL_HTML: </h2>
+- Ill-posed inverse problem
+- Sensitivity to noise 
+- Computational complexity
+- Resolution
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+
+* What are other people doing?
+#+ATTR_HTML: :width 75% :align center
+[[./images/timeline.png]]
+#+BEGIN_NOTES
+- Lailly 1983 [cite:@Lailly1983]
+- Hicks 2000 [cite:@Hicks2000]
+- Bernard 2017 [cite:@Bernard2017]
+- Oscar 2017 [cite:@Oscar2017]
+- Guasch 2020 [cite:@Guasch2020]
+- He 2021 [cite:@He2021]
+- Henriksson 2022 [cite:@Henriksson2022]
+- Robins 2023 [cite:@Robins2023]
+- Estimation of parameters of a model by data-fitting goes back more than 200 years, often accredited to Gauss
+- 1984 from Lailly and Tarantola first to use data-fitting techniques that estimate parameters that control wave propagation
+- Thus, FWI was born
+#+END_NOTES
+
+** Full-Waveform Inversion Imaging of the Human Brain
+#+REVEAL_HTML: <small>
+Guasch, Lluis, Oscar Calderón Agudo, et al. *2020*. Npj Digital Medicine
+#+REVEAL_HTML: </small>
+#+ATTR_HTML: :width 75% :align center
+[[./images/guasch-fwi.png]]
+
+#+BEGIN_NOTES
+[cite:@Guasch2020]
+ #+END_NOTES
+
+** Human Brain Imaging by Electromagnetic Tomography: A Mobile Brain Scanner for Clinical Settings
+#+REVEAL_HTML: <small>
+Henriksson, Tommy, Sahar Sahebdivan, et al. *2022*.  16th European Conference on Antennas and Propagation (EuCAP)
+#+REVEAL_HTML: </small>
+#+ATTR_HTML: :width 75% :align center
+[[./images/henriksson-emerging-paradigms.png]]
+
+#+BEGIN_NOTES
+- [cite:@Henriksson2022]
+- EMT BRIM G3 Scanner
+- Microwave Tomography (MWT) aka Electromagnetic Tomography (EMT)
+- Uses 1 Ghz radio waves
+- 192 printed slot antennas
+- Preshaped hole to fit the patients head
+- single-use cap filled with a soft matching cream with equal electrical properties to the matching medium.
+- 2.5s data acquisition time
+- Matching medium
+- A maximum Specific Absorption Ratio (SAR) value of 2000 mW/kg (averaged over 10g of tissue) is recommended by EU commission as the limitation of exposure of the general public to electromagnetic fields (0 Hz to 300 GHz)
+- he power level of EM fields used in EMT brain
+scanner is far below than the output levels of cell phones. 
+ #+END_NOTES
+
+** Dual-Probe Transcranial Full-Waveform Inversion: A Brain Phantom Feasibility Study
+#+REVEAL_HTML: <small>
+Robins, T. C., C. Cueto,  L. Guasch, et al. *2023*. Ultrasound in Medicine & Biology
+#+REVEAL_HTML: </small>
+#+ATTR_HTML: :width 75% :align center
+[[./images/robins-dual-probe.png]]
+
+#+BEGIN_NOTES
+[cite:@Robins2023]
+ #+END_NOTES
+
+* What have I done so far?
+- Simulation - /Finite Different Time Domain (FDTD)/
+- Surrogate model - /Simple five layer neural network/
+- Optimization - /Gradient descent/
+
+* Simulation Method: Finite Difference Time Domain (FDTD) Method 
+** Maxwell's equations
+\begin{align*}
+\nabla \times \vec{H} &= \frac{\partial \vec{D}}{\partial t} + \vec{J}, \\
+\nabla \times \vec{E} &= \frac{\partial \vec{B}}{\partial t} - \vec{M}, \\
+\nabla \cdot \vec{D} &= \rho_e, \\
+\nabla \cdot \vec{B} &= \rho_m, \\
+\vec{D} &= \varepsilon \vec{E}, \\
+\vec{B} &= \mu \vec{H}.
+\end{align*}
+
+#+BEGIN_NOTES
+\epsilon = permittivity = \epsilon_0 = 8.854 x 10^-12 farad/meter;
+\mu = permeability = \mu_0 = 4\pi x 10^-7 henry/meter
+#+END_NOTES
+
+** Maxwell's curl equations
+\begin{align*}
+\nabla \times \vec{H} &= \varepsilon \frac{\partial \vec{E}}{\partial t} + \sigma^e \vec{E} + \vec{J}_i, \\
+\nabla \times \vec{E} &= -\mu \frac{\partial \vec{H}}{\partial t} - \sigma^m \vec{H} - \vec{M}_i.
+\end{align*}
+
+** FDTD updating equation for 2D problems
+$$\small
+\begin{align*}
+\frac{\partial E_x}{\partial t} &= \frac{1}{\varepsilon_x} \left( \frac{\partial H_z}{\partial y} - \sigma_x^e E_x - J_{ix} \right) \\
+\frac{\partial E_y}{\partial t} &= \frac{1}{\varepsilon_y} \left( -\frac{\partial H_z}{\partial x} - \sigma_y^e E_y - J_{iy} \right) \\
+\frac{\partial E_z}{\partial t} &= \frac{1}{\varepsilon_z} \left( \frac{\partial H_y}{\partial x} - \frac{\partial H_x}{\partial y} - \sigma_z^e E_z - J_{iz} \right) \\
+\frac{\partial H_x}{\partial t} &= \frac{1}{\mu_x} \left( -\frac{\partial E_z}{\partial y} - \sigma_x^m H_x - M_{ix} \right) \\
+\frac{\partial H_y}{\partial t} &= \frac{1}{\mu_y} \left( \frac{\partial E_z}{\partial x} - \sigma_y^m H_y - M_{iy} \right) \\
+\frac{\partial H_z}{\partial t} &= \frac{1}{\mu_z} \left( \frac{\partial E_x}{\partial y} - \frac{\partial E_y}{\partial x} - \sigma_z^m H_z - M_{iz} \right)
+\end{align*}$$
+
+#+BEGIN_NOTES
+- One should notice that equations 1, 2, and 6 are dependent only on the terms Ex, Ey, and Hz, whereas equations 3, 4, 5 are dependent only on the terms Ez, Hx, and Hy. Therefore, the six equations can be treated as *two separate sets of equations*.
+- in 1, 2, 6 – all the electric field components are transverse to the reference dimension z; therefore, this set of equations constitutes the *transverse electric* to z case – TEz.
+- In the second set, 3, 4, 5 all the magnetic field components are transverse to the reference dimension z; therefore, this set of equations constitutes the *transverse magnetic* to z case – TMz. *This is what I solved*
+- Most two-dimensional problems can be decomposed into two separate problems, each including separate field components that are TEz and TMz for the case under consideration.
+#+END_NOTES
+
+** Second order accurate central difference formula
+\begin{equation*}
+f'(x) = \frac{f(x + \Delta x) - f(x - \Delta x)}{2 \Delta x} + O((\Delta x)^2)
+\end{equation*}
+
+** Grid and timestepping
+#+REVEAL_HTML: <div style="display: grid; grid-template-columns: auto auto; align-items: center;">
+#+REVEAL_HTML: <div>
+[[./images/fdtd-grid.png]]
+Two-dimensional TMz FDTD field components. Figure from [cite:@Robins2023]
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div>
+$$\tiny
+\begin{align*}
+E_z^{(n+1)}(i,j) &= C_{eze}(i,j) \cdot E_z^n(i,j) \\
+&\quad + C_{ezhy}(i,j) \cdot \left( H_y^{(n+1/2)}(i,j) - H_y^{(n+1/2)}(i-1,j) \right) \\
+&\quad + C_{ezhx}(i,j) \cdot \left( H_x^{(n+1)}(i,j) - H_x^{(n+1/2)}(i,j-1) \right) \\
+&\quad + C_{ezj}(i,j) \cdot J_{iz}^{(n+1/2)}(i,j) \\
+H_x^{(n+1/2)}(i,j) &= C_{hxh}(i,j) \cdot H_x^{(n-1/2)}(i,j) \\
+&\quad + C_{hxez}(i,j) \cdot \left( E_z^n(i,j+1) - E_z^n(i,j) \right) \\
+&\quad + C_{hxm}(i,j) \cdot M_{ix}^n(i,j) \\
+H_y^{(n+1/2)}(i,j) &= C_{hyh}(i,j) \cdot H_y^{(n-1/2)}(i,j) \\
+&\quad + C_{hyex}(i,j) \cdot \left( E_x^n(i+1,j) - E_z^n(i,j) \right) \\
+&\quad + C_{hym}(i,j) \cdot M_{iy}^n(i,j)
+\end{align*}$$
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+
+* Results
+
+* What problems did I face?
+- Managing complexity
+- Finding good dependencies
+- Building a development environment
+- Planning for the future
+  
+* What makes a good dependency? 
+#+REVEAL_HTML: <div style="display: grid; grid-template-columns: auto auto; align-items: center;">
+#+REVEAL_HTML: <div>
+- Open source
+- Well maintained
+- Good documentation
+- Large community
+- Infrequent breaking changes
+- Preferably funded
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div>
+#+REVEAL_HTML: <div class="r-stack">
+#+attr_reveal: :frag fade-out
+#+attr_reveal: :frag_idx 0 
+[[./images/bad-dependencies.png]]
+#+attr_reveal: :frag fade-in
+#+attr_reveal: :frag_idx 0 
+[[./images/good-dependencies.png]]
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+
+** Creating a Development Environment
+#+REVEAL_HTML: <div style="display: grid; grid-template-columns: auto auto; align-items: center;">
+#+REVEAL_HTML: <div>
+- Easily deployable
+- Works across different architectures
+- Pinned dependencies
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div>
+[[./images/dev-environment.png]]
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+
+** Design Strategies  
+#+begin_quote
+"Do the simplest thing that could possibly work"
+-- Ron Jeffries
+#+end_quote
+#+begin_quote
+"You aren't gonna need it"
+-- Ron Jeffries
+#+end_quote
+ #+begin_quote
+"It is hard for less experienced developers to appreciate how rarely architecting for future requirements / applications turns out net-positive"
+-- Ron Jeffries
+#+end_quote
+
+#+BEGIN_NOTES
+Ron Jeffries is one of the three founders of Extreme Programming (XP) Software development methodology
+ #+END_NOTES
+
+* Where do we go from here?
+* Decisions to be made for the forward problem
+#+REVEAL_HTML: <br>
+#+REVEAL_HTML: <div style="display: grid; grid-template-columns: auto auto auto;">
+#+REVEAL_HTML: <div>
+Spatial discretization
+Numerical flux function
+Type of elements
+Type of mesh
+Temporal accuracy
+Spatial accuracy
+Boundary conditions
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div>
+→
+→
+→
+→
+→
+→
+→
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div>
+/Discontinuous Galerkin/
+/Lax-Friedrichs
+Lagrange elements/ 
+/Unstructured tetrahedron/ 
+/2nd Order/
+/3rd Order/
+/Consecutive Matched Layer/
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div style="font-size: 0.7em;">
+#+REVEAL_HTML: <br>
+See Steven Vandekerckhove's 2016 PhD thesis: /Simulation of wave propagation problems for automated characterization of material parameters/ [cite:@Vandekerckhove2016]
+#+REVEAL_HTML: </div>
+
+#+BEGIN_NOTES 
+- highly sensitive to tissue dielectric properties
+- Possible time integration techniques: trapezoidal rule (ITR) (second order), a second order composition rule (CO2),
+#+END_NOTES 
+
+** 
+  :PROPERTIES:
+  :reveal_extra_attr: data-background-iframe="https://defelement.org/elements/lagrange.html" 
+  :END:
+  
+* Simulation Method: Discontinuous Galerkin (DG) Method
+- Write down the governing equations.
+- Decide on basis functions that you will use to represent the solution.
+- Project the solution onto your basis functions in such a way that /all the error is perpendicular to your function space/
+- Replace the flux terms at the boundary between elements with a numerical flux function
+#+REVEAL_HTML: <br>
+#+REVEAL_HTML: <br>
+#+REVEAL_HTML: <div style="font-size: 0.7em;">
+#+attr_reveal: :frag t
+See [cite:@Zanotti2015] [cite:@Dumbser2006] [cite:@Busto2020]
+#+REVEAL_HTML: </div>
+
+
+#+BEGIN_NOTES
+- DG is particularly useful for hyperbolic PDEs, meaning PDEs whose solutions contains waves, due to its ability to correctly capture shock waves. It can easily take advantage of parallel architecture, due to its discontinuous elements. (Zanotti 2015)[cite:@Zanotti2015]
+- ADER-DG approach, Dumbser et al. claim that the ”schemes are arbitrary high order in both space and time, in the sense that they have no theoretical accuracy barrier” (Dumbser 2016) [cite:@Dumbser2006]
+- ”the misfit of the simulated and measured data should only be due to the errors in the mathematical description of the physical problem...”(Busto and Dumbser 2020) [cite:@Busto2020]
+#+END_NOTES
+** Math - DG method with a perfectly matched layer
+$$\tiny
+\begin{align*}
+& q_t + \sum_{i=1}^2 \frac{\partial F_i}{\partial x_i} = f \\
+& q_t + \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y} - f = 0 \\
+& q_t + \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y} + \sigma(x) q - f = 0 \\
+& \int_{K_i}\left( q_t + \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y} + \sigma(x) q - f \right) \cdot l \, dx = 0 \\
+& \int_{K_i} \left( q_t - f \right) \cdot l \, dV - \int_{K_i} \left( \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y} \right) \cdot l \, dV + \int_{K_i} \left( \sigma(x) q \right) \cdot l \, dV = 0 \\
+& \int_{K_i} \left( q_t - f \right) \cdot l \, dV - \int_{K_i} \left( F_1 + F_2 \right) \cdot \nabla  l \, dV + \int_{K_i} \left( \sigma(x) q \right) \cdot l \, dV = -\int_{\partial K_i} \left( n_1 F_1 + n_2 F_2 \right) \cdot l \, dS \\
+& \text{Replace  }  n_1 F_1 + n_2 F_2 \text{  with numerical flux }  F^* \text{.   Use Lax-Friedrichs flux  } F_i = \frac{A_i^+ q^+ + A_i^- q^-}{2} \\
+& \int \left( q_t - f \right) \cdot l \, dV - \int \left( F_1 + F_2 \right) \cdot \nabla l \, dV + \int \left( \sigma(x) q \right) \cdot l \, dV + \int \left(\frac{A_1^+ q^+ + A_1^- q^-}{2} + \frac{A_2^+ q^+ + A_2^- q^-}{2}\right) \cdot l \, dV \\
+& q_t = \frac{q^{n+1} - q^n}{\Delta t}, \quad F_1 = A_1 q, \quad F_2 = A_2 q \\
+\end{align*}$$
+
+** Integration by parts
+\begin{equation*}
+\int_{K_i} (\nabla \cdot \mathbf{F}) \cdot l \, dV = \int_{\partial K_i} \left( \mathbf{F} \cdot \mathbf{n} \right) \cdot l \, dS - \int_{K_i} \mathbf{F} \cdot \nabla l \, dV
+\end{equation*}
+* Decisions to be made for the Inverse Problem
+#+REVEAL_HTML: <div style="display: grid; grid-template-columns: auto auto auto;">
+#+REVEAL_HTML: <div>
+#+REVEAL_HTML: <br>
+Surrogate model
+#+REVEAL_HTML: <br>
+#+REVEAL_HTML: <br>
+Optimization problem
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div>
+#+REVEAL_HTML: <br>
+→
+#+REVEAL_HTML: <br>
+#+REVEAL_HTML: <br>
+→
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div>
+#+REVEAL_HTML: <div>
+/Gaussian process (GP)/
+/Physics-Informed Neural Network (PINNs)/
+/Kolmogorov-Arnold Networks (KAN)/
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div>
+#+REVEAL_HTML: <div style="line-height:0.7em;">
+#+REVEAL_HTML: <br>
+#+REVEAL_HTML: </div>
+/Gradient Descent/
+/Markov Chain Monte Carlo (MCMC)/
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+#+BEGIN_NOTES
+- For surrogate models you can also have:
+  - Reduced-order models (ROMs)
+  - Simplified Physics models
+These can be combined with GPs and PINNs
+#+END_NOTES
+
+* Surrogate model: Gaussian Process (GP)
+#+REVEAL_HTML: <div style="display: grid; grid-template-columns: 50% 50%; align-items: center;">
+#+REVEAL_HTML: <div style="font-size: 0.8em;">
+- Gives a confidence interval for the predicted function.
+- Determined by their mean and covariance functions.
+- The covariance matrix, \Sigma, ultimately determines the characteristics of the function that we want to predict.
+- Since the covariance matrix describes the similarity between the values of our function, it controls the possible shape that a fitted function can adopt.
+- The covariance matrix is created by evaluating a /covariance function k/, also called a /kernel/, using the training data.  [cite:@Gortler2019]
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div>
+[[./images/gaussian-process.png]]
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+#+attr_reveal: :frag t
+*Disadvantages* - Best with <20 inputs
+
+
+#+BEGIN_NOTES
+- Probabilistic method that gives a confidence interval for the predicted function [cite:@Gortler2019]
+- *Nonparametric regression* does not assume a specific functional form for the relationship between the dependent variable (response) and independent variable(s) (predictors)
+- 
+#+END_NOTES
+
+* Surrogate model: Physics Informed Neural Network (PINN)
+[[./images/pinn-architecture.png]]
+Figure 1: Schematic representation of PINN  [cite:@Ganga2024]
+#+BEGIN_NOTES
+[cite:@Khalid2024]
+#+END_NOTES
+
+* Surrogate model: Kolmogorov-Arnold Network (KAN)
+#+REVEAL_HTML: <br>
+#+ATTR_HTML: :border 1 :rules all
+|----------------------------------------------------------------+-----------------------------------------|
+| Multi-layer Perceptron (MLP)                                   | Kolmogorov-Arnold Network (KAN)         |
+|----------------------------------------------------------------+-----------------------------------------|
+| Pre-defined activation functions (linear, sigmoid, ReLu, etc.) | Learnable activation functions on edges |
+| Weights adjusted during training                               | Basis functions as building blocks      |
+|                                                                | Does not use linear weights             |
+|----------------------------------------------------------------+-----------------------------------------|
+#+REVEAL_HTML: <br>
+#+attr_reveal: :frag t
+*Advantage* - Interpretability
+ 
+#+BEGIN_NOTES
+- 2024
+- Make each edge between neurons a learnable B-spline activation function.
+- Any multivariate function /f/ can be expressed as a finite composition of continuous functions of a single variable.
+- $f(x_1, \ldots, x_n) = \sum_{q=1}^{2n+1} \Phi_q \left( \sum_{p=1}^n \phi_{q,p} \, x_p \right)$ where $f(x_1,\ldots, x_n)$ is a multivariate function, $\phi_{q,p}(x_p)$ are the univariate functions, and $\Phi_q$ combines the univariate functions.
+#+END_NOTES
+
+** Visualization
+[[./images/kan-classification.gif]]
+
+* Optimization problem: Markov Chain Monte Carlo (MCMC)
+- Sampling method for exploring complex, high-dimensional spaces.
+- Identify which parameters are most relevant.
+- Often used with Gaussian Processes.
+- Can be used with Gradient Descent to explore parameter space.
+
+* Where to go from here
+- Electromagnetic waves
+- Optimizing the input waves
+- Recurrent architecture (experiment, optimization, simulation, repeat) 
+- Neural networks to help solve the inverse problem
+- Improving the model (viscoporoelastic, electromagnetic)
+- Adaptive mesh refinement 
+  
+* Bibliography
+:PROPERTIES:
+:CUSTOM_ID: bibliography
+:END:
+
+#+print_bibliography:
+
+* Available Code
+https://github.com/lukebodm/model-based-inverse-problem/
