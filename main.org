@@ -615,4 +615,5 @@ Figure 1: Schematic representation of PINN  [cite:@Ganga2024]
 #+print_bibliography:
 
 * Available Code
-https://github.com/lukebodm/model-based-inverse-problem/
+- Project: https://github.com/lukebodm/model-based-inverse-problem/
+- Presentation: https://github.com/lukebodm/oral_qualifying_exam
