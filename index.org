@@ -240,6 +240,7 @@ Challenges
 - He 2021 [cite:@He2021]
 - Henriksson 2022 [cite:@Henriksson2022]
 - Robins 2023 [cite:@Robins2023]
+- Lin 2023 [cite:@Lin2023]
 - Estimation of parameters of a model by data-fitting goes back more than 200 years, often accredited to Gauss
 - 1984 from Lailly and Tarantola first to use data-fitting techniques that estimate parameters that control wave propagation
 - Thus, FWI was born
@@ -650,6 +651,9 @@ Figure 1: Schematic representation of PINN  [cite:@Ganga2024]
 
 ** Visualization
 [[./images/kan-classification.gif]]
+#+REVEAL_HTML: <small>
+Gif from Daniel Bethell's blog [cite:@Bethell2024]
+#+REVEAL_HTML: </small>
 
 * Optimization problem: Markov Chain Monte Carlo (MCMC)
 - Sampling method for exploring complex, high-dimensional spaces.
