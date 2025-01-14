@@ -6,11 +6,12 @@
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js@4.6.0
 #+REVEAL_VERSION: 4
 #+REVEAL_EXTRA_CSS: ./custom.css
-#+REVEAL_TITLE_SLIDE: <h1>%t</h1><h3>%A %a</h3>
+#+REVEAL_TITLE_SLIDE: <h1>Affordable, Scalable, Open Source Medical Imaging Technology</h1><h3>%A %a</h3>
+#+REVEAL_EXTRA_OPTIONS: 
 #+bibliography: references.bib
 #+cite_export: csl ./citation-style.csl
 #+LATEX_HEADER: \usepackage{tikz}
-#+Title: Affordable, Scalable, Open Source Medical Imaging Technology
+#+Title: Bodmer - Qualifying Exam Presentation
 #+Author: Luke Bodmer 
 
 * Overview

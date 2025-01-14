@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>Affordable, Scalable, Open Source Medical Imaging Technology</title>
+<title>Bodmer - Qualifying Exam Presentation</title>
 <meta name="author" content="Luke Bodmer"/>
 <style type="text/css">
 .underline { text-decoration: underline; }
@@ -21,8 +21,8 @@
 <h1>Affordable, Scalable, Open Source Medical Imaging Technology</h1><h3> Luke Bodmer</h3>
 </section>
 <section>
-<section id="slide-orga7c3e44">
-<h2 id="orga7c3e44">Overview</h2>
+<section id="slide-org332d2a2">
+<h2 id="org332d2a2">Overview</h2>
 <ul>
 <li>Understanding the technology<br /></li>
 <li>Vision for the project<br /></li>
@@ -34,8 +34,8 @@
 </section>
 </section>
 <section>
-<section id="slide-orgc643c7c">
-<h2 id="orgc643c7c">Understanding the Technology</h2>
+<section id="slide-org083b47c">
+<h2 id="org083b47c">Understanding the Technology</h2>
 <p data-fragment-index="5" class="fragment">
 Full Waveform Inversion<br />
 </p>
@@ -43,12 +43,12 @@ Full Waveform Inversion<br />
 <div style="display: grid; grid-template-columns: auto auto;">
 <div>
 
-<div id="org88fb0ad" class="figure">
+<div id="org81da3a3" class="figure">
 <p><img src="./images/three-main-parts-experiment.png" alt="three-main-parts-experiment.png" data-fragment-index="1" width="100%" align="center" class="fragment" /><br />
 </p>
 </div>
 
-<div id="org813622f" class="figure">
+<div id="org5260a12" class="figure">
 <p><img src="./images/three-main-parts-neural-net.png" alt="three-main-parts-neural-net.png" data-fragment-index="3" width="100%" align="center" class="fragment" /><br />
 </p>
 </div>
@@ -56,13 +56,13 @@ Full Waveform Inversion<br />
 
 <div>
 
-<div id="org3dd4fa4" class="figure">
+<div id="org0cba8f5" class="figure">
 <p><img src="./images/three-main-parts-simulation.png" alt="three-main-parts-simulation.png" data-fragment-index="2" width="100%" align="center" class="fragment" /><br />
 </p>
 </div>
 
 
-<div id="orgddf3c3c" class="figure">
+<div id="orgb1e5be3" class="figure">
 <p><img src="./images/three-main-parts-optimization.png" alt="three-main-parts-optimization.png" data-fragment-index="4" width="100%" align="center" class="fragment" /><br />
 </p>
 </div>
@@ -89,10 +89,10 @@ Full Waveform Inversion<br />
 </section>
 </section>
 <section>
-<section id="slide-org5c7baac">
-<h2 id="org5c7baac">Simulation</h2>
+<section id="slide-org238a334">
+<h2 id="org238a334">Simulation</h2>
 
-<div id="orgb8d0aa8" class="figure">
+<div id="org26836e9" class="figure">
 <p><img src="./Ez_animation.gif" alt="Ez_animation.gif" width="75%" align="center" /><br />
 </p>
 </div>
@@ -105,8 +105,8 @@ Full Waveform Inversion<br />
 
 </aside>
 </section>
-<section id="slide-org154addb">
-<h3 id="org154addb">Importance of Visualization</h3>
+<section id="slide-orgfc50c36">
+<h3 id="orgfc50c36">Importance of Visualization</h3>
 <blockquote>
 <p>
 We are entering a new era where 3D images, visualizations, and animations will begin to extend, and in some cases, replace the current communication paradigm based on words, mathematical symbols, and 2D images. Our hope is that along the way the human imagination will be freed like never before."<br />
@@ -116,11 +116,11 @@ We are entering a new era where 3D images, visualizations, and animations will b
 </section>
 </section>
 <section>
-<section id="slide-orgb79be26">
-<h2 id="orgb79be26">Simulation</h2>
+<section id="slide-orgbaca7f1">
+<h2 id="orgbaca7f1">Simulation</h2>
 <br>
 
-<div id="org4af07d8" class="figure">
+<div id="org861615b" class="figure">
 <p><img src="./images/data-visualization.png" alt="data-visualization.png" width="100%" align="center" /><br />
 </p>
 </div>
@@ -134,8 +134,8 @@ We are entering a new era where 3D images, visualizations, and animations will b
 <b>Output</b>: vector length 7020<br />
 </p>
 </section>
-<section id="slide-orgf27297f">
-<h3 id="orgf27297f">Code</h3>
+<section id="slide-orgb0d419a">
+<h3 id="orgb0d419a">Code</h3>
 <div class="org-src-container">
 
 <pre class="src src-python"> <span style="color: #81A1C1;">def</span> <span style="color: #88C0D0;">forward_problem</span>(eps_r, mu_r, length, width, plot=<span style="color: #81A1C1;">False</span>):
@@ -164,10 +164,10 @@ We are entering a new era where 3D images, visualizations, and animations will b
 </section>
 </section>
 <section>
-<section id="slide-orgbaa509d">
-<h2 id="orgbaa509d">Surrogate Model</h2>
+<section id="slide-orgbf42f47">
+<h2 id="orgbf42f47">Surrogate Model</h2>
 
-<div id="org1d39ad9" class="figure">
+<div id="org5346ff1" class="figure">
 <p><img src="./images/neural-net.png" alt="neural-net.png" width="75%" align="center" /><br />
 </p>
 </div>
@@ -181,8 +181,8 @@ We are entering a new era where 3D images, visualizations, and animations will b
 
 </aside>
 </section>
-<section id="slide-org1f66509">
-<h3 id="org1f66509">Code</h3>
+<section id="slide-org4bfd7e1">
+<h3 id="org4bfd7e1">Code</h3>
 <div class="org-src-container">
 
 <pre class="src src-python"><span style="color: #81A1C1;">import</span> torch
@@ -208,8 +208,8 @@ We are entering a new era where 3D images, visualizations, and animations will b
 </section>
 </section>
 <section>
-<section id="slide-orgc0ad6a0">
-<h2 id="orgc0ad6a0">Optimization</h2>
+<section id="slide-orga3f2a4a">
+<h2 id="orga3f2a4a">Optimization</h2>
 <p width="75%" align="center">
 <img src="./images/optimization.png" alt="optimization.png" width="75%" align="center" /><br />
 Gradient descent least-squares method to optimize the objective function: \(f(m) = \frac{1}{2} \| \text{experimental data} - \text{simulated data} \|_2^2\)<br />
@@ -224,8 +224,8 @@ Gradient descent least-squares method to optimize the objective function: \(f(m)
 </section>
 </section>
 <section>
-<section id="slide-org7eb8c2b">
-<h2 id="org7eb8c2b">Vision for the Project</h2>
+<section id="slide-orgf979cd7">
+<h2 id="orgf979cd7">Vision for the Project</h2>
 <div style="display: grid; grid-template-columns: auto auto;">
 <div style="font-size: 0.7em; display: grid; grid-template-columns: auto auto; align-items: center;">
 <div>
@@ -285,7 +285,7 @@ Runs on a laptop in the middle of the Congo<br />
 </div>
 <div>
 
-<div id="org205d4ed" class="figure">
+<div id="orgdc9237c" class="figure">
 <p><img src="./images/ai-visions.png" alt="ai-visions.png" width="65%" align="center" /><br />
 </p>
 </div>
@@ -304,8 +304,8 @@ Runs on a laptop in the middle of the Congo<br />
 </section>
 </section>
 <section>
-<section id="slide-org0c9ab9c">
-<h2 id="org0c9ab9c"></h2>
+<section id="slide-org63f2891">
+<h2 id="org63f2891"></h2>
 <div style="display: grid; grid-template-columns: auto auto;">
 <div>
 <h2>
@@ -339,10 +339,10 @@ Challenges<br />
 </section>
 </section>
 <section>
-<section id="slide-org98a332b">
-<h2 id="org98a332b">What are other people doing?</h2>
+<section id="slide-orgb05da92">
+<h2 id="orgb05da92">What are other people doing?</h2>
 
-<div id="org856bbce" class="figure">
+<div id="org9b70a64" class="figure">
 <p><img src="./images/timeline.png" alt="timeline.png" width="75%" align="center" /><br />
 </p>
 </div>
@@ -364,15 +364,15 @@ Challenges<br />
 
 </aside>
 </section>
-<section id="slide-org617eeb2">
-<h3 id="org617eeb2">Full-Waveform Inversion Imaging of the Human Brain</h3>
+<section id="slide-orgdbe8ec7">
+<h3 id="orgdbe8ec7">Full-Waveform Inversion Imaging of the Human Brain</h3>
 <small>
 <p>
 Guasch, Lluis, Oscar Calderón Agudo, et al. <b>2020</b>. Npj Digital Medicine<br />
 </p>
 </small>
 
-<div id="orgfad75aa" class="figure">
+<div id="orga34dd6c" class="figure">
 <p><img src="./images/guasch-fwi.png" alt="guasch-fwi.png" width="75%" align="center" /><br />
 </p>
 </div>
@@ -385,15 +385,15 @@ Guasch, Lluis, Oscar Calderón Agudo, et al. <b>2020</b>. Npj Digital Medicine<b
 
 </aside>
 </section>
-<section id="slide-orgba07692">
-<h3 id="orgba07692">Human Brain Imaging by Electromagnetic Tomography: A Mobile Brain Scanner for Clinical Settings</h3>
+<section id="slide-orgb5f8439">
+<h3 id="orgb5f8439">Human Brain Imaging by Electromagnetic Tomography: A Mobile Brain Scanner for Clinical Settings</h3>
 <small>
 <p>
 Henriksson, Tommy, Sahar Sahebdivan, et al. <b>2022</b>.  16th European Conference on Antennas and Propagation (EuCAP)<br />
 </p>
 </small>
 
-<div id="org89bd991" class="figure">
+<div id="org5d1fb68" class="figure">
 <p><img src="./images/henriksson-emerging-paradigms.png" alt="henriksson-emerging-paradigms.png" width="75%" align="center" /><br />
 </p>
 </div>
@@ -416,15 +416,15 @@ Henriksson, Tommy, Sahar Sahebdivan, et al. <b>2022</b>.  16th European Conferen
 
 </aside>
 </section>
-<section id="slide-org0a86af2">
-<h3 id="org0a86af2">Dual-Probe Transcranial Full-Waveform Inversion: A Brain Phantom Feasibility Study</h3>
+<section id="slide-orge5f0878">
+<h3 id="orge5f0878">Dual-Probe Transcranial Full-Waveform Inversion: A Brain Phantom Feasibility Study</h3>
 <small>
 <p>
 Robins, T. C., C. Cueto,  L. Guasch, et al. <b>2023</b>. Ultrasound in Medicine &amp; Biology<br />
 </p>
 </small>
 
-<div id="org25ba2a0" class="figure">
+<div id="orgb672317" class="figure">
 <p><img src="./images/robins-dual-probe.png" alt="robins-dual-probe.png" width="75%" align="center" /><br />
 </p>
 </div>
@@ -444,8 +444,8 @@ Robins, T. C., C. Cueto,  L. Guasch, et al. <b>2023</b>. Ultrasound in Medicine 
 </section>
 </section>
 <section>
-<section id="slide-org3e73120">
-<h2 id="org3e73120">What have I done so far?</h2>
+<section id="slide-orgc7ffdfe">
+<h2 id="orgc7ffdfe">What have I done so far?</h2>
 <ul>
 <li>Simulation - <i>Finite Different Time Domain (FDTD)</i><br /></li>
 <li>Surrogate model - <i>Simple five layer neural network</i><br /></li>
@@ -455,13 +455,13 @@ Robins, T. C., C. Cueto,  L. Guasch, et al. <b>2023</b>. Ultrasound in Medicine 
 </section>
 </section>
 <section>
-<section id="slide-org03f4ce8">
-<h2 id="org03f4ce8">Simulation Method: Finite Difference Time Domain (FDTD) Method</h2>
-<div class="outline-text-2" id="text-org03f4ce8">
+<section id="slide-org5a872d8">
+<h2 id="org5a872d8">Simulation Method: Finite Difference Time Domain (FDTD) Method</h2>
+<div class="outline-text-2" id="text-org5a872d8">
 </div>
 </section>
-<section id="slide-org7bcda82">
-<h3 id="org7bcda82">Maxwell's equations</h3>
+<section id="slide-org7ff4c0c">
+<h3 id="org7ff4c0c">Maxwell's equations</h3>
 <div>
 \begin{align*}
 \nabla \times \vec{H} &= \frac{\partial \vec{D}}{\partial t} + \vec{J}, \\
@@ -491,8 +491,8 @@ Robins, T. C., C. Cueto,  L. Guasch, et al. <b>2023</b>. Ultrasound in Medicine 
 
 </aside>
 </section>
-<section id="slide-org51f9533">
-<h3 id="org51f9533">Maxwell's curl equations</h3>
+<section id="slide-org9fd4d90">
+<h3 id="org9fd4d90">Maxwell's curl equations</h3>
 <div>
 \begin{align*}
 \vec{J} = \vec{J}_c &+ \vec{J}_i \quad \quad  \vec{J}_c = \sigma^e \vec{E} \\
@@ -527,8 +527,8 @@ Robins, T. C., C. Cueto,  L. Guasch, et al. <b>2023</b>. Ultrasound in Medicine 
 
 </aside>
 </section>
-<section id="slide-org1188673">
-<h3 id="org1188673">FDTD updating equation for 2D problems</h3>
+<section id="slide-org62ec838">
+<h3 id="org62ec838">FDTD updating equation for 2D problems</h3>
 <p>
 \[\small
 \begin{align*}
@@ -568,8 +568,8 @@ Robins, T. C., C. Cueto,  L. Guasch, et al. <b>2023</b>. Ultrasound in Medicine 
 
 </aside>
 </section>
-<section id="slide-org51d7267">
-<h3 id="org51d7267">Second order accurate central difference formula</h3>
+<section id="slide-org610ee3e">
+<h3 id="org610ee3e">Second order accurate central difference formula</h3>
 <div>
 \begin{equation*}
 f'(x) = \frac{f(x + \Delta x) - f(x - \Delta x)}{2 \Delta x} + O((\Delta x)^2)
@@ -577,8 +577,8 @@ f'(x) = \frac{f(x + \Delta x) - f(x - \Delta x)}{2 \Delta x} + O((\Delta x)^2)
 
 </div>
 </section>
-<section id="slide-orgdd80ce0">
-<h3 id="orgdd80ce0">Grid and timestepping</h3>
+<section id="slide-org3615e37">
+<h3 id="org3615e37">Grid and timestepping</h3>
 <div style="display: grid; grid-template-columns: auto auto; align-items: center;">
 <div>
 <p>
@@ -607,14 +607,14 @@ H_y^{(n+1/2)}(i,j) &= C_{hyh}(i,j) \cdot H_y^{(n-1/2)}(i,j) \\
 </section>
 </section>
 <section>
-<section id="slide-org98c93b6">
-<h2 id="org98c93b6">Results</h2>
+<section id="slide-org2651519">
+<h2 id="org2651519">Results</h2>
 
 </section>
 </section>
 <section>
-<section id="slide-org59ba341">
-<h2 id="org59ba341">What problems did I face?</h2>
+<section id="slide-orgfe9384a">
+<h2 id="orgfe9384a">What problems did I face?</h2>
 <ul>
 <li>Managing complexity<br /></li>
 <li>Finding good dependencies<br /></li>
@@ -625,8 +625,8 @@ H_y^{(n+1/2)}(i,j) &= C_{hyh}(i,j) \cdot H_y^{(n-1/2)}(i,j) \\
 </section>
 </section>
 <section>
-<section id="slide-orgf81e6ef">
-<h2 id="orgf81e6ef">What makes a good dependency?</h2>
+<section id="slide-orgbf7d0be">
+<h2 id="orgbf7d0be">What makes a good dependency?</h2>
 <div style="display: grid; grid-template-columns: auto auto; align-items: center;">
 <div>
 <ul>
@@ -642,12 +642,12 @@ H_y^{(n+1/2)}(i,j) &= C_{hyh}(i,j) \cdot H_y^{(n-1/2)}(i,j) \\
 <div>
 <div class="r-stack">
 
-<div id="org202117b" class="figure">
+<div id="orgdd91997" class="figure">
 <p><img src="./images/bad-dependencies.png" alt="bad-dependencies.png" data-fragment-index="0" class="fragment fade-out" /><br />
 </p>
 </div>
 
-<div id="orgb666c0f" class="figure">
+<div id="org106f394" class="figure">
 <p><img src="./images/good-dependencies.png" alt="good-dependencies.png" data-fragment-index="0" class="fragment fade-in" /><br />
 </p>
 </div>
@@ -662,8 +662,8 @@ H_y^{(n+1/2)}(i,j) &= C_{hyh}(i,j) \cdot H_y^{(n-1/2)}(i,j) \\
 
 </aside>
 </section>
-<section id="slide-org275adf8">
-<h3 id="org275adf8">Creating a Development Environment</h3>
+<section id="slide-org2fbd017">
+<h3 id="org2fbd017">Creating a Development Environment</h3>
 <div style="display: grid; grid-template-columns: auto auto; align-items: center;">
 <div>
 <ul>
@@ -675,15 +675,15 @@ H_y^{(n+1/2)}(i,j) &= C_{hyh}(i,j) \cdot H_y^{(n-1/2)}(i,j) \\
 </div>
 <div>
 
-<div id="org71fc8da" class="figure">
+<div id="org38c7e4f" class="figure">
 <p><img src="./images/dev-environment.png" alt="dev-environment.png" /><br />
 </p>
 </div>
 </div>
 </div>
 </section>
-<section id="slide-org5fc5b04">
-<h3 id="org5fc5b04">Design Strategies</h3>
+<section id="slide-org7b26c7e">
+<h3 id="org7b26c7e">Design Strategies</h3>
 <blockquote>
 <p>
 "Do the simplest thing that could possibly work"<br />
@@ -712,13 +712,13 @@ Ron Jeffries is one of the three founders of Extreme Programming (XP) Software d
 </section>
 </section>
 <section>
-<section id="slide-orge11d4fb">
-<h2 id="orge11d4fb">Where do we go from here?</h2>
+<section id="slide-org421b698">
+<h2 id="org421b698">Where do we go from here?</h2>
 </section>
 </section>
 <section>
-<section id="slide-orge39e53f">
-<h2 id="orge39e53f">Decisions to be made for the forward problem</h2>
+<section id="slide-org1b7fb27">
+<h2 id="org1b7fb27">Decisions to be made for the forward problem</h2>
 <br>
 <div style="display: grid; grid-template-columns: auto auto auto;">
 <div>
@@ -772,13 +772,13 @@ See Steven Vandekerckhove's 2016 PhD thesis: <i>Simulation of wave propagation p
 
 </aside>
 </section>
-<section id="slide-org9445a72" data-background-iframe="https://defelement.org/elements/index.html">
-<h3 id="org9445a72"></h3>
+<section id="slide-org34e3d5e" data-background-iframe="https://defelement.org/elements/index.html">
+<h3 id="org34e3d5e"></h3>
 </section>
 </section>
 <section>
-<section id="slide-orge1c3dc5">
-<h2 id="orge1c3dc5">Simulation Method: Discontinuous Galerkin (DG) Method</h2>
+<section id="slide-orgea3e88c">
+<h2 id="orgea3e88c">Simulation Method: Discontinuous Galerkin (DG) Method</h2>
 <ul>
 <li>Write down the governing equations.<br /></li>
 <li>Decide on basis functions that you will use to represent the solution.<br /></li>
@@ -805,8 +805,8 @@ See<sup>[<a href="#citeproc_bib_item_11">11</a>]</sup><sup>[<a href="#citeproc_b
 
 </aside>
 </section>
-<section id="slide-orgac25866">
-<h3 id="orgac25866">Math - DG method with a perfectly matched layer</h3>
+<section id="slide-orgfbe15d3">
+<h3 id="orgfbe15d3">Math - DG method with a perfectly matched layer</h3>
 <p>
 \[\tiny
 \begin{align*}
@@ -822,8 +822,8 @@ See<sup>[<a href="#citeproc_bib_item_11">11</a>]</sup><sup>[<a href="#citeproc_b
 \end{align*}\]<br />
 </p>
 </section>
-<section id="slide-org2c35e17">
-<h3 id="org2c35e17">Integration by parts</h3>
+<section id="slide-orga8ac61f">
+<h3 id="orga8ac61f">Integration by parts</h3>
 <div>
 \begin{equation*}
 \int_{K_i} (\nabla \cdot \mathbf{F}) \cdot l \, dV = \int_{\partial K_i} \left( \mathbf{F} \cdot \mathbf{n} \right) \cdot l \, dS - \int_{K_i} \mathbf{F} \cdot \nabla l \, dV
@@ -833,8 +833,8 @@ See<sup>[<a href="#citeproc_bib_item_11">11</a>]</sup><sup>[<a href="#citeproc_b
 </section>
 </section>
 <section>
-<section id="slide-org4dc18ba">
-<h2 id="org4dc18ba">Decisions to be made for the Inverse Problem</h2>
+<section id="slide-orgbcb0c20">
+<h2 id="orgbcb0c20">Decisions to be made for the Inverse Problem</h2>
 <div style="display: grid; grid-template-columns: auto auto auto;">
 <div>
 <br>
@@ -893,8 +893,8 @@ Optimization problem<br />
 </section>
 </section>
 <section>
-<section id="slide-orga095fd9">
-<h2 id="orga095fd9">Surrogate model: Gaussian Process (GP)</h2>
+<section id="slide-orgce3d7f1">
+<h2 id="orgce3d7f1">Surrogate model: Gaussian Process (GP)</h2>
 <div style="display: grid; grid-template-columns: 50% 50%; align-items: center;">
 <div style="font-size: 0.8em;">
 <ul>
@@ -908,7 +908,7 @@ Optimization problem<br />
 </div>
 <div>
 
-<div id="org9aee679" class="figure">
+<div id="org6c832f4" class="figure">
 <p><img src="./images/gaussian-process.png" alt="gaussian-process.png" /><br />
 </p>
 </div>
@@ -930,8 +930,8 @@ Optimization problem<br />
 </section>
 </section>
 <section>
-<section id="slide-orgae265fe">
-<h2 id="orgae265fe">Surrogate model: Physics Informed Neural Network (PINN)</h2>
+<section id="slide-org2679e82">
+<h2 id="org2679e82">Surrogate model: Physics Informed Neural Network (PINN)</h2>
 <p>
 <img src="./images/pinn-architecture.png" alt="pinn-architecture.png" /><br />
 Figure 1: Schematic representation of PINN<sup>[<a href="#citeproc_bib_item_15">15</a>]</sup><br />
@@ -947,8 +947,8 @@ Figure 1: Schematic representation of PINN<sup>[<a href="#citeproc_bib_item_15">
 </section>
 </section>
 <section>
-<section id="slide-org782010a">
-<h2 id="org782010a">Surrogate model: Kolmogorov-Arnold Network (KAN)</h2>
+<section id="slide-org9b63fe1">
+<h2 id="org9b63fe1">Surrogate model: Kolmogorov-Arnold Network (KAN)</h2>
 <br>
 <table border="1" cellspacing="0" cellpadding="6" rules="all" frame="hsides">
 
@@ -997,18 +997,18 @@ Figure 1: Schematic representation of PINN<sup>[<a href="#citeproc_bib_item_15">
 
 </aside>
 </section>
-<section id="slide-org7f90cc2">
-<h3 id="org7f90cc2">Visualization</h3>
+<section id="slide-orgaa266c0">
+<h3 id="orgaa266c0">Visualization</h3>
 
-<div id="org2ac738a" class="figure">
+<div id="orga90490b" class="figure">
 <p><img src="./images/kan-classification.gif" alt="kan-classification.gif" /><br />
 </p>
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orgf6804b6">
-<h2 id="orgf6804b6">Optimization problem: Markov Chain Monte Carlo (MCMC)</h2>
+<section id="slide-org15c88bb">
+<h2 id="org15c88bb">Optimization problem: Markov Chain Monte Carlo (MCMC)</h2>
 <ul>
 <li>Sampling method for exploring complex, high-dimensional spaces.<br /></li>
 <li>Identify which parameters are most relevant.<br /></li>
@@ -1019,8 +1019,8 @@ Figure 1: Schematic representation of PINN<sup>[<a href="#citeproc_bib_item_15">
 </section>
 </section>
 <section>
-<section id="slide-orgb68e5c2">
-<h2 id="orgb68e5c2">Where to go from here</h2>
+<section id="slide-org3a57fe6">
+<h2 id="org3a57fe6">Where to go from here</h2>
 <ul>
 <li>Multi-physics: (acoustic and electromagnetic waves)<br /></li>
 <li>Improving the model (viscoporoelastic, non-linear)<br /></li>
@@ -1057,8 +1057,8 @@ Figure 1: Schematic representation of PINN<sup>[<a href="#citeproc_bib_item_15">
 </section>
 </section>
 <section>
-<section id="slide-org154e429">
-<h2 id="org154e429">Available Code</h2>
+<section id="slide-org6b2786a">
+<h2 id="org6b2786a">Available Code</h2>
 <ul>
 <li>Project: <a href="https://github.com/lukebodm/model-based-inverse-problem/">https://github.com/lukebodm/model-based-inverse-problem/</a><br /></li>
 <li>Presentation: <a href="https://github.com/lukebodm/oral_qualifying_exam">https://github.com/lukebodm/oral_qualifying_exam</a><br /></li>
