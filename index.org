@@ -21,9 +21,8 @@
 - Where to go from here
   
 * Understanding the Technology 
-#+attr_reveal: :frag t
-#+attr_reveal: :frag_idx 5 
-/Model-Based Inverse Problem Solving/
+#+attr_reveal: :frag t :frag_idx 5
+Full Waveform Inversion
 
 #+REVEAL_HTML: <div style="display: grid; grid-template-columns: auto auto;">
 #+REVEAL_HTML: <div>
@@ -52,6 +51,7 @@
 
 #+BEGIN_NOTES
 - AKA Simulation-based inference
+- /Model-Based Inverse Problem Solving/
 - Simulation-Based Parameter Inversion
 - Iterative Inverse Solving
 - What is inferred is the simulator parameters that are likely to have generated that data
@@ -145,8 +145,12 @@ class PinnModel(nn.Module):
 #+END_SRC
 
 * Optimization
-#+ATTR_HTML: :width 100% :align center
+#+ATTR_HTML: :width 75% :align center
 [[./images/optimization.png]]
+Gradient descent least-squares method to optimize the objective function: $f(m) = \frac{1}{2} \| \text{experimental data} - \text{simulated data} \|_2^2$
+#+BEGIN_NOTES
+- where /m/ a vector of model parameters
+#+END_NOTES
 
 * Vision for the Project
 #+REVEAL_HTML: <div style="display: grid; grid-template-columns: auto auto;">
@@ -198,9 +202,8 @@ Runs on a laptop in the middle of the Congo
 #+REVEAL_HTML: </div>
 
 #+BEGIN_NOTES
-- [cite:@Makin2021]
+- For statistics on the accessibility of MRI, see [cite:@Makin2021]
 - Laptop text could read: /Ischemic stroke in the left middle cerebral artery (MCA), primarily affecting the frontal lobe./
-- 
 #+END_NOTES
 * 
 #+REVEAL_HTML: <div style="display: grid; grid-template-columns: auto auto;">
@@ -249,7 +252,7 @@ Guasch, Lluis, Oscar Calderón Agudo, et al. *2020*. Npj Digital Medicine
 [[./images/guasch-fwi.png]]
 
 #+BEGIN_NOTES
-[cite:@Guasch2020]
+- See paper by Guasch, et al. [cite:@Guasch2020]
  #+END_NOTES
 
 ** Human Brain Imaging by Electromagnetic Tomography: A Mobile Brain Scanner for Clinical Settings
@@ -260,18 +263,17 @@ Henriksson, Tommy, Sahar Sahebdivan, et al. *2022*.  16th European Conference on
 [[./images/henriksson-emerging-paradigms.png]]
 
 #+BEGIN_NOTES
-- [cite:@Henriksson2022]
+- See paper by Henriksson et al. [cite:@Henriksson2022]
 - EMT BRIM G3 Scanner
 - Microwave Tomography (MWT) aka Electromagnetic Tomography (EMT)
 - Uses 1 Ghz radio waves
 - 192 printed slot antennas
 - Preshaped hole to fit the patients head
-- single-use cap filled with a soft matching cream with equal electrical properties to the matching medium.
+- Single-use cap filled with a soft matching cream with equal electrical properties to the matching medium.
 - 2.5s data acquisition time
 - Matching medium
 - A maximum Specific Absorption Ratio (SAR) value of 2000 mW/kg (averaged over 10g of tissue) is recommended by EU commission as the limitation of exposure of the general public to electromagnetic fields (0 Hz to 300 GHz)
-- he power level of EM fields used in EMT brain
-scanner is far below than the output levels of cell phones. 
+- The power level of EM fields used in EMT brain scanner is far below than the output levels of cell phones. 
  #+END_NOTES
 
 ** Dual-Probe Transcranial Full-Waveform Inversion: A Brain Phantom Feasibility Study
@@ -282,7 +284,12 @@ Robins, T. C., C. Cueto,  L. Guasch, et al. *2023*. Ultrasound in Medicine & Bio
 [[./images/robins-dual-probe.png]]
 
 #+BEGIN_NOTES
-[cite:@Robins2023]
+- See paper by Robins et al. [cite:@Robins2023]
+- "In this study, we demonstrate for the ﬁrst time the feasibility of applying FWI to reconstruct a brain-tissue phantom surrounded by a skull-mimicking layer."
+- ultrasound computed tomography (USCT) acquisition system
+- They constrained the problem to 2D
+- "This was done to simplify the acquisition of USCT data and to reduce computational costs when running FWI."
+- 
  #+END_NOTES
 
 * What have I done so far?
@@ -302,15 +309,45 @@ Robins, T. C., C. Cueto,  L. Guasch, et al. *2023*. Ultrasound in Medicine & Bio
 \end{align*}
 
 #+BEGIN_NOTES
-\epsilon = permittivity = \epsilon_0 = 8.854 x 10^-12 farad/meter;
-\mu = permeability = \mu_0 = 4\pi x 10^-7 henry/meter
+- \epsilon = permittivity = \epsilon_0 = 8.854 x 10^-12 farad/meter;
+- \mu = permeability = \mu_0 = 4\pi x 10^-7 henry/meter
+- *E* - electric field strength vector [volts/meter]
+- *D* - electric displacement vector [coulombs / meter^2]
+- *H* - magnetic field strength vector [amps / meter^2]
+- *B* - magnetic flux density vector [webers / meter^2]
+- *J* - electric current density vector [amperes / meter^2]
+- *M* - magnetic current density vector [volts / meter^2]
+- *\rho_e* - electric charge density [coulombs / meter^3]
+- *\rho_m* - magnetic charge density [webers / meter^3]
 #+END_NOTES
 
 ** Maxwell's curl equations
 \begin{align*}
+\vec{J} = \vec{J}_c &+ \vec{J}_i \quad \quad  \vec{J}_c = \sigma^e \vec{E} \\
+\vec{M} = \vec{M}_c &+ \vec{M}_i \quad \quad \vec{M}_c = \sigma^m \vec{H}   \\
 \nabla \times \vec{H} &= \varepsilon \frac{\partial \vec{E}}{\partial t} + \sigma^e \vec{E} + \vec{J}_i, \\
 \nabla \times \vec{E} &= -\mu \frac{\partial \vec{H}}{\partial t} - \sigma^m \vec{H} - \vec{M}_i.
 \end{align*}
+
+#+BEGIN_NOTES
+- Although only the curl equations are used and the divergence equations are not part of the FDTD formalism, the divergence equations can be used as a test on the predicted field response, so that after forming D = \epsilon E and B = \mu H from the predicted E and H fields, the resulting D and B must satisfy the divergence equations.
+- \epsilon = permittivity = \epsilon_0 = 8.854 x 10^-12 farad/meter;
+- \mu = permeability = \mu_0 = 4\pi x 10^-7 henry/meter
+- *E* - electric field strength vector [volts/meter]
+- *D* - electric displacement vector [coulombs / meter^2]
+- *H* - magnetic field strength vector [amps / meter^2]
+- *B* - magnetic flux density vector [webers / meter^2]
+- *J* - electric current density vector [amperes / meter^2]
+- *M* - magnetic current density vector [volts / meter^2]
+- *\rho_e* - electric charge density [coulombs / meter^3]
+- *\rho_m* - magnetic charge density [webers / meter^3]
+- *J_c* - conduction current density
+- *J_i* - impressed current density
+- *M_c* - magnetic conduction current density
+- *M_i* - magnetic impressed current density
+- *\sigma^e* - electric conductivity [siemens / meter]
+- *\sigma^m* - magnetic conductivity [siemens / meter]
+  #+END_NOTES
 
 ** FDTD updating equation for 2D problems
 $$\small
@@ -328,6 +365,22 @@ $$\small
 - in 1, 2, 6 – all the electric field components are transverse to the reference dimension z; therefore, this set of equations constitutes the *transverse electric* to z case – TEz.
 - In the second set, 3, 4, 5 all the magnetic field components are transverse to the reference dimension z; therefore, this set of equations constitutes the *transverse magnetic* to z case – TMz. *This is what I solved*
 - Most two-dimensional problems can be decomposed into two separate problems, each including separate field components that are TEz and TMz for the case under consideration.
+- \epsilon = permittivity = \epsilon_0 = 8.854 x 10^-12 farad/meter;
+- \mu = permeability = \mu_0 = 4\pi x 10^-7 henry/meter
+- *E* - electric field strength vector [volts/meter]
+- *D* - electric displacement vector [coulombs / meter^2]
+- *H* - magnetic field strength vector [amps / meter^2]
+- *B* - magnetic flux density vector [webers / meter^2]
+- *J* - electric current density vector [amperes / meter^2]
+- *M* - magnetic current density vector [volts / meter^2]
+- *\rho_e* - electric charge density [coulombs / meter^3]
+- *\rho_m* - magnetic charge density [webers / meter^3]
+- *J_c* - conduction current density
+- *J_i* - impressed current density
+- *M_c* - magnetic conduction current density
+- *M_i* - magnetic impressed current density
+- *\sigma^e* - electric conductivity [siemens / meter]
+- *\sigma^m* - magnetic conductivity [siemens / meter]
 #+END_NOTES
 
 ** Second order accurate central difference formula
@@ -386,6 +439,10 @@ H_y^{(n+1/2)}(i,j) &= C_{hyh}(i,j) \cdot H_y^{(n-1/2)}(i,j) \\
 [[./images/good-dependencies.png]]
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
+
+#+BEGIN_NOTES
+- VTK and Open Cascade are used in tools like Paraview, 3D slicer (medical image anlysis software), mstk (interactive medical simulation toolkit), etc.
+#+END_NOTES
 
 ** Creating a Development Environment
 #+REVEAL_HTML: <div style="display: grid; grid-template-columns: auto auto; align-items: center;">
@@ -456,13 +513,13 @@ See Steven Vandekerckhove's 2016 PhD thesis: /Simulation of wave propagation pro
 #+REVEAL_HTML: </div>
 
 #+BEGIN_NOTES 
-- highly sensitive to tissue dielectric properties
+- The Lax-Friedrichs numerical flux guarantees the stability of the scheme
 - Possible time integration techniques: trapezoidal rule (ITR) (second order), a second order composition rule (CO2),
 #+END_NOTES 
 
 ** 
   :PROPERTIES:
-  :reveal_extra_attr: data-background-iframe="https://defelement.org/elements/lagrange.html" 
+  :reveal_extra_attr: data-background-iframe="https://defelement.org/elements/index.html" 
   :END:
   
 * Simulation Method: Discontinuous Galerkin (DG) Method
@@ -536,7 +593,7 @@ Optimization problem
 - For surrogate models you can also have:
   - Reduced-order models (ROMs)
   - Simplified Physics models
-These can be combined with GPs and PINNs
+- These can be combined with GPs and PINNs
 #+END_NOTES
 
 * Surrogate model: Gaussian Process (GP)
@@ -559,14 +616,14 @@ These can be combined with GPs and PINNs
 #+BEGIN_NOTES
 - Probabilistic method that gives a confidence interval for the predicted function [cite:@Gortler2019]
 - *Nonparametric regression* does not assume a specific functional form for the relationship between the dependent variable (response) and independent variable(s) (predictors)
-- 
 #+END_NOTES
 
 * Surrogate model: Physics Informed Neural Network (PINN)
 [[./images/pinn-architecture.png]]
 Figure 1: Schematic representation of PINN  [cite:@Ganga2024]
 #+BEGIN_NOTES
-[cite:@Khalid2024]
+- Exciting use in medical imaing, See [cite:@Khalid2024]
+- First use of PINNs, 2017 Maziar Raissi, Paris Perdikaris, George Em Karniadakis [cite:@Raissi2017]
 #+END_NOTES
 
 * Surrogate model: Kolmogorov-Arnold Network (KAN)
@@ -584,7 +641,7 @@ Figure 1: Schematic representation of PINN  [cite:@Ganga2024]
 *Advantage* - Interpretability
  
 #+BEGIN_NOTES
-- 2024
+- 2024 Ziming Liu, Yixuan Wang, Sachin Vaidya, Fabian Ruehle, James Halverson, Marin Soljačić, Thomas Y. Hou, Max Tegmark [cite:@Liu2024]
 - Make each edge between neurons a learnable B-spline activation function.
 - Any multivariate function /f/ can be expressed as a finite composition of continuous functions of a single variable.
 - $f(x_1, \ldots, x_n) = \sum_{q=1}^{2n+1} \Phi_q \left( \sum_{p=1}^n \phi_{q,p} \, x_p \right)$ where $f(x_1,\ldots, x_n)$ is a multivariate function, $\phi_{q,p}(x_p)$ are the univariate functions, and $\Phi_q$ combines the univariate functions.
@@ -600,11 +657,10 @@ Figure 1: Schematic representation of PINN  [cite:@Ganga2024]
 - Can be used with Gradient Descent to explore parameter space.
 
 * Where to go from here
-- Electromagnetic waves
-- Optimizing the input waves
-- Recurrent architecture (experiment, optimization, simulation, repeat) 
-- Neural networks to help solve the inverse problem
-- Improving the model (viscoporoelastic, electromagnetic)
+- Multi-physics: (acoustic and electromagnetic waves)
+- Improving the model (viscoporoelastic, non-linear)
+- Optimizing the input
+- Sequential design (experiment, optimization, simulation, repeat) 
 - Adaptive mesh refinement 
   
 * Bibliography

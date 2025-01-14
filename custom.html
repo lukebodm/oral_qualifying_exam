@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="./reveal.js/css/theme/black.css" id="theme"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<p class="date">Created: 2025-01-14 Tue 09:55</p>
+</section>
+<p>
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,350,350i,400,400i&amp;display=swap');
+</p>
+
+<p>
+<i>* Define font families *</i>
+:root {
+  &#x2013;font-family-sans-serif: "Roboto", sans-serif;
+  &#x2013;presentation-heading-font: "Roboto", sans-serif;
+</p>
+
+<p>
+<i>* Define presentation styles *</i>
+&#x2013;presentation-heading-color: #121111; <i>* Replace $jet with the appropriate hex value *</i>
+&#x2013;presentation-heading-font-weight: lighter;
+&#x2013;presentation-font-size-root: 32px;
+</p>
+
+<p>
+  <i>* Colors *</i>
+  &#x2013;body-color: #121111; <i>* Replace $jet with the appropriate hex value *</i>
+  &#x2013;link-color: #0056b3; <i>* Replace $accent with the appropriate hex value *</i>
+  &#x2013;selection-bg: #121111;
+}
+</p>
+
+<p>
+<i>* Apply font families *</i>
+body {
+  font-family: var(&#x2013;font-family-sans-serif);
+  color: var(&#x2013;body-color);
+  font-weight: lighter;
+}
+</p>
+
+<p>
+table {
+  font-family: var(&#x2013;font-family-sans-serif);
+  color: var(&#x2013;body-color);
+  font-weight: lighter;
+  border: solid 1px;
+}
+</p>
+
+<p>
+td { width: 50%};
+</p>
+
+<p>
+.reveal a {
+  font-family: var(&#x2013;font-family-sans-serif);
+  color: var(&#x2013;body-color);
+  font-weight: lighter;
+}
+</p>
+
+<p>
+.reveal p {
+  font-family: var(&#x2013;font-family-sans-serif); <i>* Ensure Roboto font is applied *</i>
+  color: var(&#x2013;body-color);
+  font-weight: lighter;
+}
+.reveal li {
+  font-family: var(&#x2013;font-family-sans-serif); <i>* Ensure Roboto font is applied *</i>
+  color: var(&#x2013;body-color);
+  font-weight: lighter;
+}
+</p>
+
+
+<p>
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  color: var(&#x2013;body-color);
+  font-family: "Roboto", Impact, sans-serif;
+  line-height: 0.9em;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: lighter;
+}
+</p>
+
+<p>
+.reveal h1 {
+  font-family: var(&#x2013;font-family-sans-serif); <i>* Ensure Roboto font is applied *</i>
+  color: var(&#x2013;body-color);
+  font-weight: lighter;
+  padding-bottom: 1em;
+}
+</p>
+
+<p>
+.reveal ul {
+  list-style-type: none; <i>* Remove default bullet *</i>
+</p>
+
+<p>
+}
+ul {
+    list-style-type: none; <i>* Remove default bullet *</i>
+}
+.reveal ul li::before {
+    content: "•"; <i>* Custom bullet *</i>
+    margin-right: 0.5em; <i>* Add space after bullet *</i>
+    color: inherit; <i>* Match the text color *</i>
+    font-size: 1em; <i>* Match the text size (adjust if needed) *</i>
+}
+</p>
+
+<p>
+.csl-bib-body{
+    font-size: 0.45em;
+    text-align: left;
+}
+</p>
+
+<p>
+.MathJax {
+    font-weight: lighter !important;
+}
+</p>
+</div>
+</div>
+<script src="./reveal.js/lib/js/head.min.js"></script>
+<script src="./reveal.js/js/reveal.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'convex', // see README of reveal.js for options
+transitionSpeed: 'default',
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+ { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+</script>
+</body>
+</html>

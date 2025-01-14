@@ -21,8 +21,8 @@
 <h1>Affordable, Scalable, Open Source Medical Imaging Technology</h1><h3> Luke Bodmer</h3>
 </section>
 <section>
-<section id="slide-org94b7229">
-<h2 id="org94b7229">Overview</h2>
+<section id="slide-orga7c3e44">
+<h2 id="orga7c3e44">Overview</h2>
 <ul>
 <li>Understanding the technology<br /></li>
 <li>Vision for the project<br /></li>
@@ -34,21 +34,21 @@
 </section>
 </section>
 <section>
-<section id="slide-org7360f3e">
-<h2 id="org7360f3e">Understanding the Technology</h2>
+<section id="slide-orgc643c7c">
+<h2 id="orgc643c7c">Understanding the Technology</h2>
 <p data-fragment-index="5" class="fragment">
-<i>Model-Based Inverse Problem Solving</i><br />
+Full Waveform Inversion<br />
 </p>
 
 <div style="display: grid; grid-template-columns: auto auto;">
 <div>
 
-<div id="org8e323e0" class="figure">
+<div id="org88fb0ad" class="figure">
 <p><img src="./images/three-main-parts-experiment.png" alt="three-main-parts-experiment.png" data-fragment-index="1" width="100%" align="center" class="fragment" /><br />
 </p>
 </div>
 
-<div id="orgb7ebe90" class="figure">
+<div id="org813622f" class="figure">
 <p><img src="./images/three-main-parts-neural-net.png" alt="three-main-parts-neural-net.png" data-fragment-index="3" width="100%" align="center" class="fragment" /><br />
 </p>
 </div>
@@ -56,13 +56,13 @@
 
 <div>
 
-<div id="orgeabe3b6" class="figure">
+<div id="org3dd4fa4" class="figure">
 <p><img src="./images/three-main-parts-simulation.png" alt="three-main-parts-simulation.png" data-fragment-index="2" width="100%" align="center" class="fragment" /><br />
 </p>
 </div>
 
 
-<div id="orgeb42ec4" class="figure">
+<div id="orgddf3c3c" class="figure">
 <p><img src="./images/three-main-parts-optimization.png" alt="three-main-parts-optimization.png" data-fragment-index="4" width="100%" align="center" class="fragment" /><br />
 </p>
 </div>
@@ -72,6 +72,7 @@
 <aside class="notes">
 <ul>
 <li>AKA Simulation-based inference<br /></li>
+<li><i>Model-Based Inverse Problem Solving</i><br /></li>
 <li>Simulation-Based Parameter Inversion<br /></li>
 <li>Iterative Inverse Solving<br /></li>
 <li>What is inferred is the simulator parameters that are likely to have generated that data<br /></li>
@@ -88,10 +89,10 @@
 </section>
 </section>
 <section>
-<section id="slide-orgaa7ce59">
-<h2 id="orgaa7ce59">Simulation</h2>
+<section id="slide-org5c7baac">
+<h2 id="org5c7baac">Simulation</h2>
 
-<div id="orgc81dc44" class="figure">
+<div id="orgb8d0aa8" class="figure">
 <p><img src="./Ez_animation.gif" alt="Ez_animation.gif" width="75%" align="center" /><br />
 </p>
 </div>
@@ -104,8 +105,8 @@
 
 </aside>
 </section>
-<section id="slide-orgcbc7ffe">
-<h3 id="orgcbc7ffe">Importance of Visualization</h3>
+<section id="slide-org154addb">
+<h3 id="org154addb">Importance of Visualization</h3>
 <blockquote>
 <p>
 We are entering a new era where 3D images, visualizations, and animations will begin to extend, and in some cases, replace the current communication paradigm based on words, mathematical symbols, and 2D images. Our hope is that along the way the human imagination will be freed like never before."<br />
@@ -115,11 +116,11 @@ We are entering a new era where 3D images, visualizations, and animations will b
 </section>
 </section>
 <section>
-<section id="slide-org3120b93">
-<h2 id="org3120b93">Simulation</h2>
+<section id="slide-orgb79be26">
+<h2 id="orgb79be26">Simulation</h2>
 <br>
 
-<div id="org54fa053" class="figure">
+<div id="org4af07d8" class="figure">
 <p><img src="./images/data-visualization.png" alt="data-visualization.png" width="100%" align="center" /><br />
 </p>
 </div>
@@ -133,8 +134,8 @@ We are entering a new era where 3D images, visualizations, and animations will b
 <b>Output</b>: vector length 7020<br />
 </p>
 </section>
-<section id="slide-org9dbb639">
-<h3 id="org9dbb639">Code</h3>
+<section id="slide-orgf27297f">
+<h3 id="orgf27297f">Code</h3>
 <div class="org-src-container">
 
 <pre class="src src-python"> <span style="color: #81A1C1;">def</span> <span style="color: #88C0D0;">forward_problem</span>(eps_r, mu_r, length, width, plot=<span style="color: #81A1C1;">False</span>):
@@ -163,10 +164,10 @@ We are entering a new era where 3D images, visualizations, and animations will b
 </section>
 </section>
 <section>
-<section id="slide-org1fc6c3c">
-<h2 id="org1fc6c3c">Surrogate Model</h2>
+<section id="slide-orgbaa509d">
+<h2 id="orgbaa509d">Surrogate Model</h2>
 
-<div id="orgc4ebd04" class="figure">
+<div id="org1d39ad9" class="figure">
 <p><img src="./images/neural-net.png" alt="neural-net.png" width="75%" align="center" /><br />
 </p>
 </div>
@@ -180,8 +181,8 @@ We are entering a new era where 3D images, visualizations, and animations will b
 
 </aside>
 </section>
-<section id="slide-orgbb093cd">
-<h3 id="orgbb093cd">Code</h3>
+<section id="slide-org1f66509">
+<h3 id="org1f66509">Code</h3>
 <div class="org-src-container">
 
 <pre class="src src-python"><span style="color: #81A1C1;">import</span> torch
@@ -207,18 +208,24 @@ We are entering a new era where 3D images, visualizations, and animations will b
 </section>
 </section>
 <section>
-<section id="slide-orgc05cd86">
-<h2 id="orgc05cd86">Optimization</h2>
-
-<div id="orgcdefaaa" class="figure">
-<p><img src="./images/optimization.png" alt="optimization.png" width="100%" align="center" /><br />
+<section id="slide-orgc0ad6a0">
+<h2 id="orgc0ad6a0">Optimization</h2>
+<p width="75%" align="center">
+<img src="./images/optimization.png" alt="optimization.png" width="75%" align="center" /><br />
+Gradient descent least-squares method to optimize the objective function: \(f(m) = \frac{1}{2} \| \text{experimental data} - \text{simulated data} \|_2^2\)<br />
 </p>
-</div>
+<aside class="notes">
+<ul>
+<li>where <i>m</i> a vector of model parameters<br /></li>
+
+</ul>
+
+</aside>
 </section>
 </section>
 <section>
-<section id="slide-org94d9c54">
-<h2 id="org94d9c54">Vision for the Project</h2>
+<section id="slide-org7eb8c2b">
+<h2 id="org7eb8c2b">Vision for the Project</h2>
 <div style="display: grid; grid-template-columns: auto auto;">
 <div style="font-size: 0.7em; display: grid; grid-template-columns: auto auto; align-items: center;">
 <div>
@@ -278,7 +285,7 @@ Runs on a laptop in the middle of the Congo<br />
 </div>
 <div>
 
-<div id="org1a88154" class="figure">
+<div id="org205d4ed" class="figure">
 <p><img src="./images/ai-visions.png" alt="ai-visions.png" width="65%" align="center" /><br />
 </p>
 </div>
@@ -288,9 +295,8 @@ Runs on a laptop in the middle of the Congo<br />
 
 <aside class="notes">
 <ul>
-<li><sup>[<a href="#citeproc_bib_item_1">1</a>]</sup><br /></li>
+<li>For statistics on the accessibility of MRI, see<sup>[<a href="#citeproc_bib_item_1">1</a>]</sup><br /></li>
 <li>Laptop text could read: <i>Ischemic stroke in the left middle cerebral artery (MCA), primarily affecting the frontal lobe.</i><br /></li>
-<li></li>
 
 </ul>
 
@@ -298,8 +304,8 @@ Runs on a laptop in the middle of the Congo<br />
 </section>
 </section>
 <section>
-<section id="slide-org2cc41a6">
-<h2 id="org2cc41a6"></h2>
+<section id="slide-org0c9ab9c">
+<h2 id="org0c9ab9c"></h2>
 <div style="display: grid; grid-template-columns: auto auto;">
 <div>
 <h2>
@@ -333,10 +339,10 @@ Challenges<br />
 </section>
 </section>
 <section>
-<section id="slide-orgcc7120e">
-<h2 id="orgcc7120e">What are other people doing?</h2>
+<section id="slide-org98a332b">
+<h2 id="org98a332b">What are other people doing?</h2>
 
-<div id="org47f8e37" class="figure">
+<div id="org856bbce" class="figure">
 <p><img src="./images/timeline.png" alt="timeline.png" width="75%" align="center" /><br />
 </p>
 </div>
@@ -358,84 +364,88 @@ Challenges<br />
 
 </aside>
 </section>
-<section id="slide-org35b0e39">
-<h3 id="org35b0e39">Full-Waveform Inversion Imaging of the Human Brain</h3>
+<section id="slide-org617eeb2">
+<h3 id="org617eeb2">Full-Waveform Inversion Imaging of the Human Brain</h3>
 <small>
 <p>
 Guasch, Lluis, Oscar Calderón Agudo, et al. <b>2020</b>. Npj Digital Medicine<br />
 </p>
 </small>
 
-<div id="orgba2cd65" class="figure">
+<div id="orgfad75aa" class="figure">
 <p><img src="./images/guasch-fwi.png" alt="guasch-fwi.png" width="75%" align="center" /><br />
 </p>
 </div>
 
 <aside class="notes">
-<p>
-<sup>[<a href="#citeproc_bib_item_6">6</a>]</sup><br />
-</p>
+<ul>
+<li>See paper by Guasch, et al.<sup>[<a href="#citeproc_bib_item_6">6</a>]</sup><br /></li>
+
+</ul>
 
 </aside>
 </section>
-<section id="slide-org81d4778">
-<h3 id="org81d4778">Human Brain Imaging by Electromagnetic Tomography: A Mobile Brain Scanner for Clinical Settings</h3>
+<section id="slide-orgba07692">
+<h3 id="orgba07692">Human Brain Imaging by Electromagnetic Tomography: A Mobile Brain Scanner for Clinical Settings</h3>
 <small>
 <p>
 Henriksson, Tommy, Sahar Sahebdivan, et al. <b>2022</b>.  16th European Conference on Antennas and Propagation (EuCAP)<br />
 </p>
 </small>
 
-<div id="orgba9e762" class="figure">
+<div id="org89bd991" class="figure">
 <p><img src="./images/henriksson-emerging-paradigms.png" alt="henriksson-emerging-paradigms.png" width="75%" align="center" /><br />
 </p>
 </div>
 
 <aside class="notes">
 <ul>
-<li><sup>[<a href="#citeproc_bib_item_8">8</a>]</sup><br /></li>
+<li>See paper by Henriksson et al.<sup>[<a href="#citeproc_bib_item_8">8</a>]</sup><br /></li>
 <li>EMT BRIM G3 Scanner<br /></li>
 <li>Microwave Tomography (MWT) aka Electromagnetic Tomography (EMT)<br /></li>
 <li>Uses 1 Ghz radio waves<br /></li>
 <li>192 printed slot antennas<br /></li>
 <li>Preshaped hole to fit the patients head<br /></li>
-<li>single-use cap filled with a soft matching cream with equal electrical properties to the matching medium.<br /></li>
+<li>Single-use cap filled with a soft matching cream with equal electrical properties to the matching medium.<br /></li>
 <li>2.5s data acquisition time<br /></li>
 <li>Matching medium<br /></li>
 <li>A maximum Specific Absorption Ratio (SAR) value of 2000 mW/kg (averaged over 10g of tissue) is recommended by EU commission as the limitation of exposure of the general public to electromagnetic fields (0 Hz to 300 GHz)<br /></li>
-<li>he power level of EM fields used in EMT brain<br /></li>
+<li>The power level of EM fields used in EMT brain scanner is far below than the output levels of cell phones.<br /></li>
 
 </ul>
-<p>
-scanner is far below than the output levels of cell phones.<br />
-</p>
 
 </aside>
 </section>
-<section id="slide-orgb64c2f4">
-<h3 id="orgb64c2f4">Dual-Probe Transcranial Full-Waveform Inversion: A Brain Phantom Feasibility Study</h3>
+<section id="slide-org0a86af2">
+<h3 id="org0a86af2">Dual-Probe Transcranial Full-Waveform Inversion: A Brain Phantom Feasibility Study</h3>
 <small>
 <p>
 Robins, T. C., C. Cueto,  L. Guasch, et al. <b>2023</b>. Ultrasound in Medicine &amp; Biology<br />
 </p>
 </small>
 
-<div id="orgdaf443f" class="figure">
+<div id="org25ba2a0" class="figure">
 <p><img src="./images/robins-dual-probe.png" alt="robins-dual-probe.png" width="75%" align="center" /><br />
 </p>
 </div>
 
 <aside class="notes">
-<p>
-<sup>[<a href="#citeproc_bib_item_9">9</a>]</sup><br />
-</p>
+<ul>
+<li>See paper by Robins et al.<sup>[<a href="#citeproc_bib_item_9">9</a>]</sup><br /></li>
+<li>"In this study, we demonstrate for the ﬁrst time the feasibility of applying FWI to reconstruct a brain-tissue phantom surrounded by a skull-mimicking layer."<br /></li>
+<li>ultrasound computed tomography (USCT) acquisition system<br /></li>
+<li>They constrained the problem to 2D<br /></li>
+<li>"This was done to simplify the acquisition of USCT data and to reduce computational costs when running FWI."<br /></li>
+<li></li>
+
+</ul>
 
 </aside>
 </section>
 </section>
 <section>
-<section id="slide-orgc867e16">
-<h2 id="orgc867e16">What have I done so far?</h2>
+<section id="slide-org3e73120">
+<h2 id="org3e73120">What have I done so far?</h2>
 <ul>
 <li>Simulation - <i>Finite Different Time Domain (FDTD)</i><br /></li>
 <li>Surrogate model - <i>Simple five layer neural network</i><br /></li>
@@ -445,13 +455,13 @@ Robins, T. C., C. Cueto,  L. Guasch, et al. <b>2023</b>. Ultrasound in Medicine 
 </section>
 </section>
 <section>
-<section id="slide-orgffe7b74">
-<h2 id="orgffe7b74">Simulation Method: Finite Difference Time Domain (FDTD) Method</h2>
-<div class="outline-text-2" id="text-orgffe7b74">
+<section id="slide-org03f4ce8">
+<h2 id="org03f4ce8">Simulation Method: Finite Difference Time Domain (FDTD) Method</h2>
+<div class="outline-text-2" id="text-org03f4ce8">
 </div>
 </section>
-<section id="slide-org73f8839">
-<h3 id="org73f8839">Maxwell's equations</h3>
+<section id="slide-org7bcda82">
+<h3 id="org7bcda82">Maxwell's equations</h3>
 <div>
 \begin{align*}
 \nabla \times \vec{H} &= \frac{\partial \vec{D}}{\partial t} + \vec{J}, \\
@@ -465,25 +475,60 @@ Robins, T. C., C. Cueto,  L. Guasch, et al. <b>2023</b>. Ultrasound in Medicine 
 </div>
 
 <aside class="notes">
-<p>
-&epsilon; = permittivity = &epsilon;<sub>0</sub> = 8.854 x 10<sup>-12</sup> farad/meter;<br />
-&mu; = permeability = &mu;<sub>0</sub> = 4&pi; x 10<sup>-7</sup> henry/meter<br />
-</p>
+<ul>
+<li>&epsilon; = permittivity = &epsilon;<sub>0</sub> = 8.854 x 10<sup>-12</sup> farad/meter;<br /></li>
+<li>&mu; = permeability = &mu;<sub>0</sub> = 4&pi; x 10<sup>-7</sup> henry/meter<br /></li>
+<li><b>E</b> - electric field strength vector [volts/meter]<br /></li>
+<li><b>D</b> - electric displacement vector [coulombs / meter<sup>2</sup>]<br /></li>
+<li><b>H</b> - magnetic field strength vector [amps / meter<sup>2</sup>]<br /></li>
+<li><b>B</b> - magnetic flux density vector [webers / meter<sup>2</sup>]<br /></li>
+<li><b>J</b> - electric current density vector [amperes / meter<sup>2</sup>]<br /></li>
+<li><b>M</b> - magnetic current density vector [volts / meter<sup>2</sup>]<br /></li>
+<li><b>&rho;<sub>e</sub></b> - electric charge density [coulombs / meter<sup>3</sup>]<br /></li>
+<li><b>&rho;<sub>m</sub></b> - magnetic charge density [webers / meter<sup>3</sup>]<br /></li>
+
+</ul>
 
 </aside>
 </section>
-<section id="slide-org4eea058">
-<h3 id="org4eea058">Maxwell's curl equations</h3>
+<section id="slide-org51f9533">
+<h3 id="org51f9533">Maxwell's curl equations</h3>
 <div>
 \begin{align*}
+\vec{J} = \vec{J}_c &+ \vec{J}_i \quad \quad  \vec{J}_c = \sigma^e \vec{E} \\
+\vec{M} = \vec{M}_c &+ \vec{M}_i \quad \quad \vec{M}_c = \sigma^m \vec{H}   \\
 \nabla \times \vec{H} &= \varepsilon \frac{\partial \vec{E}}{\partial t} + \sigma^e \vec{E} + \vec{J}_i, \\
 \nabla \times \vec{E} &= -\mu \frac{\partial \vec{H}}{\partial t} - \sigma^m \vec{H} - \vec{M}_i.
 \end{align*}
 
 </div>
+
+<aside class="notes">
+<ul>
+<li>Although only the curl equations are used and the divergence equations are not part of the FDTD formalism, the divergence equations can be used as a test on the predicted field response, so that after forming D = &epsilon; E and B = &mu; H from the predicted E and H fields, the resulting D and B must satisfy the divergence equations.<br /></li>
+<li>&epsilon; = permittivity = &epsilon;<sub>0</sub> = 8.854 x 10<sup>-12</sup> farad/meter;<br /></li>
+<li>&mu; = permeability = &mu;<sub>0</sub> = 4&pi; x 10<sup>-7</sup> henry/meter<br /></li>
+<li><b>E</b> - electric field strength vector [volts/meter]<br /></li>
+<li><b>D</b> - electric displacement vector [coulombs / meter<sup>2</sup>]<br /></li>
+<li><b>H</b> - magnetic field strength vector [amps / meter<sup>2</sup>]<br /></li>
+<li><b>B</b> - magnetic flux density vector [webers / meter<sup>2</sup>]<br /></li>
+<li><b>J</b> - electric current density vector [amperes / meter<sup>2</sup>]<br /></li>
+<li><b>M</b> - magnetic current density vector [volts / meter<sup>2</sup>]<br /></li>
+<li><b>&rho;<sub>e</sub></b> - electric charge density [coulombs / meter<sup>3</sup>]<br /></li>
+<li><b>&rho;<sub>m</sub></b> - magnetic charge density [webers / meter<sup>3</sup>]<br /></li>
+<li><b>J<sub>c</sub></b> - conduction current density<br /></li>
+<li><b>J<sub>i</sub></b> - impressed current density<br /></li>
+<li><b>M<sub>c</sub></b> - magnetic conduction current density<br /></li>
+<li><b>M<sub>i</sub></b> - magnetic impressed current density<br /></li>
+<li><b>&sigma;<sup>e</sup></b> - electric conductivity [siemens / meter]<br /></li>
+<li><b>&sigma;<sup>m</sup></b> - magnetic conductivity [siemens / meter]<br /></li>
+
+</ul>
+
+</aside>
 </section>
-<section id="slide-org691d1a1">
-<h3 id="org691d1a1">FDTD updating equation for 2D problems</h3>
+<section id="slide-org1188673">
+<h3 id="org1188673">FDTD updating equation for 2D problems</h3>
 <p>
 \[\small
 \begin{align*}
@@ -502,13 +547,29 @@ Robins, T. C., C. Cueto,  L. Guasch, et al. <b>2023</b>. Ultrasound in Medicine 
 <li>in 1, 2, 6 – all the electric field components are transverse to the reference dimension z; therefore, this set of equations constitutes the <b>transverse electric</b> to z case – TEz.<br /></li>
 <li>In the second set, 3, 4, 5 all the magnetic field components are transverse to the reference dimension z; therefore, this set of equations constitutes the <b>transverse magnetic</b> to z case – TMz. <b>This is what I solved</b><br /></li>
 <li>Most two-dimensional problems can be decomposed into two separate problems, each including separate field components that are TEz and TMz for the case under consideration.<br /></li>
+<li>&epsilon; = permittivity = &epsilon;<sub>0</sub> = 8.854 x 10<sup>-12</sup> farad/meter;<br /></li>
+<li>&mu; = permeability = &mu;<sub>0</sub> = 4&pi; x 10<sup>-7</sup> henry/meter<br /></li>
+<li><b>E</b> - electric field strength vector [volts/meter]<br /></li>
+<li><b>D</b> - electric displacement vector [coulombs / meter<sup>2</sup>]<br /></li>
+<li><b>H</b> - magnetic field strength vector [amps / meter<sup>2</sup>]<br /></li>
+<li><b>B</b> - magnetic flux density vector [webers / meter<sup>2</sup>]<br /></li>
+<li><b>J</b> - electric current density vector [amperes / meter<sup>2</sup>]<br /></li>
+<li><b>M</b> - magnetic current density vector [volts / meter<sup>2</sup>]<br /></li>
+<li><b>&rho;<sub>e</sub></b> - electric charge density [coulombs / meter<sup>3</sup>]<br /></li>
+<li><b>&rho;<sub>m</sub></b> - magnetic charge density [webers / meter<sup>3</sup>]<br /></li>
+<li><b>J<sub>c</sub></b> - conduction current density<br /></li>
+<li><b>J<sub>i</sub></b> - impressed current density<br /></li>
+<li><b>M<sub>c</sub></b> - magnetic conduction current density<br /></li>
+<li><b>M<sub>i</sub></b> - magnetic impressed current density<br /></li>
+<li><b>&sigma;<sup>e</sup></b> - electric conductivity [siemens / meter]<br /></li>
+<li><b>&sigma;<sup>m</sup></b> - magnetic conductivity [siemens / meter]<br /></li>
 
 </ul>
 
 </aside>
 </section>
-<section id="slide-orgb318197">
-<h3 id="orgb318197">Second order accurate central difference formula</h3>
+<section id="slide-org51d7267">
+<h3 id="org51d7267">Second order accurate central difference formula</h3>
 <div>
 \begin{equation*}
 f'(x) = \frac{f(x + \Delta x) - f(x - \Delta x)}{2 \Delta x} + O((\Delta x)^2)
@@ -516,8 +577,8 @@ f'(x) = \frac{f(x + \Delta x) - f(x - \Delta x)}{2 \Delta x} + O((\Delta x)^2)
 
 </div>
 </section>
-<section id="slide-org625e1ad">
-<h3 id="org625e1ad">Grid and timestepping</h3>
+<section id="slide-orgdd80ce0">
+<h3 id="orgdd80ce0">Grid and timestepping</h3>
 <div style="display: grid; grid-template-columns: auto auto; align-items: center;">
 <div>
 <p>
@@ -546,14 +607,14 @@ H_y^{(n+1/2)}(i,j) &= C_{hyh}(i,j) \cdot H_y^{(n-1/2)}(i,j) \\
 </section>
 </section>
 <section>
-<section id="slide-org5182f35">
-<h2 id="org5182f35">Results</h2>
+<section id="slide-org98c93b6">
+<h2 id="org98c93b6">Results</h2>
 
 </section>
 </section>
 <section>
-<section id="slide-org8855017">
-<h2 id="org8855017">What problems did I face?</h2>
+<section id="slide-org59ba341">
+<h2 id="org59ba341">What problems did I face?</h2>
 <ul>
 <li>Managing complexity<br /></li>
 <li>Finding good dependencies<br /></li>
@@ -564,8 +625,8 @@ H_y^{(n+1/2)}(i,j) &= C_{hyh}(i,j) \cdot H_y^{(n-1/2)}(i,j) \\
 </section>
 </section>
 <section>
-<section id="slide-org4789a44">
-<h2 id="org4789a44">What makes a good dependency?</h2>
+<section id="slide-orgf81e6ef">
+<h2 id="orgf81e6ef">What makes a good dependency?</h2>
 <div style="display: grid; grid-template-columns: auto auto; align-items: center;">
 <div>
 <ul>
@@ -581,20 +642,28 @@ H_y^{(n+1/2)}(i,j) &= C_{hyh}(i,j) \cdot H_y^{(n-1/2)}(i,j) \\
 <div>
 <div class="r-stack">
 
-<div id="org4ca316b" class="figure">
+<div id="org202117b" class="figure">
 <p><img src="./images/bad-dependencies.png" alt="bad-dependencies.png" data-fragment-index="0" class="fragment fade-out" /><br />
 </p>
 </div>
 
-<div id="orgd9f7725" class="figure">
+<div id="orgb666c0f" class="figure">
 <p><img src="./images/good-dependencies.png" alt="good-dependencies.png" data-fragment-index="0" class="fragment fade-in" /><br />
 </p>
 </div>
 </div>
 </div>
+
+<aside class="notes">
+<ul>
+<li>VTK and Open Cascade are used in tools like Paraview, 3D slicer (medical image anlysis software), mstk (interactive medical simulation toolkit), etc.<br /></li>
+
+</ul>
+
+</aside>
 </section>
-<section id="slide-orga6a597b">
-<h3 id="orga6a597b">Creating a Development Environment</h3>
+<section id="slide-org275adf8">
+<h3 id="org275adf8">Creating a Development Environment</h3>
 <div style="display: grid; grid-template-columns: auto auto; align-items: center;">
 <div>
 <ul>
@@ -606,15 +675,15 @@ H_y^{(n+1/2)}(i,j) &= C_{hyh}(i,j) \cdot H_y^{(n-1/2)}(i,j) \\
 </div>
 <div>
 
-<div id="org25c86a2" class="figure">
+<div id="org71fc8da" class="figure">
 <p><img src="./images/dev-environment.png" alt="dev-environment.png" /><br />
 </p>
 </div>
 </div>
 </div>
 </section>
-<section id="slide-orgf06db16">
-<h3 id="orgf06db16">Design Strategies</h3>
+<section id="slide-org5fc5b04">
+<h3 id="org5fc5b04">Design Strategies</h3>
 <blockquote>
 <p>
 "Do the simplest thing that could possibly work"<br />
@@ -643,13 +712,13 @@ Ron Jeffries is one of the three founders of Extreme Programming (XP) Software d
 </section>
 </section>
 <section>
-<section id="slide-org5b8092b">
-<h2 id="org5b8092b">Where do we go from here?</h2>
+<section id="slide-orge11d4fb">
+<h2 id="orge11d4fb">Where do we go from here?</h2>
 </section>
 </section>
 <section>
-<section id="slide-orgcbb72f6">
-<h2 id="orgcbb72f6">Decisions to be made for the forward problem</h2>
+<section id="slide-orge39e53f">
+<h2 id="orge39e53f">Decisions to be made for the forward problem</h2>
 <br>
 <div style="display: grid; grid-template-columns: auto auto auto;">
 <div>
@@ -696,20 +765,20 @@ See Steven Vandekerckhove's 2016 PhD thesis: <i>Simulation of wave propagation p
 
 <aside class="notes">
 <ul>
-<li>highly sensitive to tissue dielectric properties<br /></li>
+<li>The Lax-Friedrichs numerical flux guarantees the stability of the scheme<br /></li>
 <li>Possible time integration techniques: trapezoidal rule (ITR) (second order), a second order composition rule (CO2),<br /></li>
 
 </ul>
 
 </aside>
 </section>
-<section id="slide-orgc7bacc6" data-background-iframe="https://defelement.org/elements/lagrange.html">
-<h3 id="orgc7bacc6"></h3>
+<section id="slide-org9445a72" data-background-iframe="https://defelement.org/elements/index.html">
+<h3 id="org9445a72"></h3>
 </section>
 </section>
 <section>
-<section id="slide-orgae31444">
-<h2 id="orgae31444">Simulation Method: Discontinuous Galerkin (DG) Method</h2>
+<section id="slide-orge1c3dc5">
+<h2 id="orge1c3dc5">Simulation Method: Discontinuous Galerkin (DG) Method</h2>
 <ul>
 <li>Write down the governing equations.<br /></li>
 <li>Decide on basis functions that you will use to represent the solution.<br /></li>
@@ -736,8 +805,8 @@ See<sup>[<a href="#citeproc_bib_item_11">11</a>]</sup><sup>[<a href="#citeproc_b
 
 </aside>
 </section>
-<section id="slide-org718a3f3">
-<h3 id="org718a3f3">Math - DG method with a perfectly matched layer</h3>
+<section id="slide-orgac25866">
+<h3 id="orgac25866">Math - DG method with a perfectly matched layer</h3>
 <p>
 \[\tiny
 \begin{align*}
@@ -753,8 +822,8 @@ See<sup>[<a href="#citeproc_bib_item_11">11</a>]</sup><sup>[<a href="#citeproc_b
 \end{align*}\]<br />
 </p>
 </section>
-<section id="slide-org35ab95b">
-<h3 id="org35ab95b">Integration by parts</h3>
+<section id="slide-org2c35e17">
+<h3 id="org2c35e17">Integration by parts</h3>
 <div>
 \begin{equation*}
 \int_{K_i} (\nabla \cdot \mathbf{F}) \cdot l \, dV = \int_{\partial K_i} \left( \mathbf{F} \cdot \mathbf{n} \right) \cdot l \, dS - \int_{K_i} \mathbf{F} \cdot \nabla l \, dV
@@ -764,8 +833,8 @@ See<sup>[<a href="#citeproc_bib_item_11">11</a>]</sup><sup>[<a href="#citeproc_b
 </section>
 </section>
 <section>
-<section id="slide-org43c3c78">
-<h2 id="org43c3c78">Decisions to be made for the Inverse Problem</h2>
+<section id="slide-org4dc18ba">
+<h2 id="org4dc18ba">Decisions to be made for the Inverse Problem</h2>
 <div style="display: grid; grid-template-columns: auto auto auto;">
 <div>
 <br>
@@ -816,18 +885,16 @@ Optimization problem<br />
 <li>Simplified Physics models<br /></li>
 
 </ul></li>
+<li>These can be combined with GPs and PINNs<br /></li>
 
 </ul>
-<p>
-These can be combined with GPs and PINNs<br />
-</p>
 
 </aside>
 </section>
 </section>
 <section>
-<section id="slide-orgb61239a">
-<h2 id="orgb61239a">Surrogate model: Gaussian Process (GP)</h2>
+<section id="slide-orga095fd9">
+<h2 id="orga095fd9">Surrogate model: Gaussian Process (GP)</h2>
 <div style="display: grid; grid-template-columns: 50% 50%; align-items: center;">
 <div style="font-size: 0.8em;">
 <ul>
@@ -841,7 +908,7 @@ These can be combined with GPs and PINNs<br />
 </div>
 <div>
 
-<div id="org1d76d71" class="figure">
+<div id="org9aee679" class="figure">
 <p><img src="./images/gaussian-process.png" alt="gaussian-process.png" /><br />
 </p>
 </div>
@@ -856,7 +923,6 @@ These can be combined with GPs and PINNs<br />
 <ul>
 <li>Probabilistic method that gives a confidence interval for the predicted function<sup>[<a href="#citeproc_bib_item_14">14</a>]</sup><br /></li>
 <li><b>Nonparametric regression</b> does not assume a specific functional form for the relationship between the dependent variable (response) and independent variable(s) (predictors)<br /></li>
-<li></li>
 
 </ul>
 
@@ -864,23 +930,25 @@ These can be combined with GPs and PINNs<br />
 </section>
 </section>
 <section>
-<section id="slide-org0aeaf72">
-<h2 id="org0aeaf72">Surrogate model: Physics Informed Neural Network (PINN)</h2>
+<section id="slide-orgae265fe">
+<h2 id="orgae265fe">Surrogate model: Physics Informed Neural Network (PINN)</h2>
 <p>
 <img src="./images/pinn-architecture.png" alt="pinn-architecture.png" /><br />
 Figure 1: Schematic representation of PINN<sup>[<a href="#citeproc_bib_item_15">15</a>]</sup><br />
 </p>
 <aside class="notes">
-<p>
-<sup>[<a href="#citeproc_bib_item_16">16</a>]</sup><br />
-</p>
+<ul>
+<li>Exciting use in medical imaing, See<sup>[<a href="#citeproc_bib_item_16">16</a>]</sup><br /></li>
+<li>First use of PINNs, 2017 Maziar Raissi, Paris Perdikaris, George Em Karniadakis<sup>[<a href="#citeproc_bib_item_17">17</a>]</sup><br /></li>
+
+</ul>
 
 </aside>
 </section>
 </section>
 <section>
-<section id="slide-org5948641">
-<h2 id="org5948641">Surrogate model: Kolmogorov-Arnold Network (KAN)</h2>
+<section id="slide-org782010a">
+<h2 id="org782010a">Surrogate model: Kolmogorov-Arnold Network (KAN)</h2>
 <br>
 <table border="1" cellspacing="0" cellpadding="6" rules="all" frame="hsides">
 
@@ -920,7 +988,7 @@ Figure 1: Schematic representation of PINN<sup>[<a href="#citeproc_bib_item_15">
 
 <aside class="notes">
 <ul>
-<li>2024<br /></li>
+<li>2024 Ziming Liu, Yixuan Wang, Sachin Vaidya, Fabian Ruehle, James Halverson, Marin Soljačić, Thomas Y. Hou, Max Tegmark<sup>[<a href="#citeproc_bib_item_18">18</a>]</sup><br /></li>
 <li>Make each edge between neurons a learnable B-spline activation function.<br /></li>
 <li>Any multivariate function <i>f</i> can be expressed as a finite composition of continuous functions of a single variable.<br /></li>
 <li>\(f(x_1, \ldots, x_n) = \sum_{q=1}^{2n+1} \Phi_q \left( \sum_{p=1}^n \phi_{q,p} \, x_p \right)\) where \(f(x_1,\ldots, x_n)\) is a multivariate function, \(\phi_{q,p}(x_p)\) are the univariate functions, and \(\Phi_q\) combines the univariate functions.<br /></li>
@@ -929,18 +997,18 @@ Figure 1: Schematic representation of PINN<sup>[<a href="#citeproc_bib_item_15">
 
 </aside>
 </section>
-<section id="slide-orga0aac06">
-<h3 id="orga0aac06">Visualization</h3>
+<section id="slide-org7f90cc2">
+<h3 id="org7f90cc2">Visualization</h3>
 
-<div id="orgf845765" class="figure">
+<div id="org2ac738a" class="figure">
 <p><img src="./images/kan-classification.gif" alt="kan-classification.gif" /><br />
 </p>
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org44a0192">
-<h2 id="org44a0192">Optimization problem: Markov Chain Monte Carlo (MCMC)</h2>
+<section id="slide-orgf6804b6">
+<h2 id="orgf6804b6">Optimization problem: Markov Chain Monte Carlo (MCMC)</h2>
 <ul>
 <li>Sampling method for exploring complex, high-dimensional spaces.<br /></li>
 <li>Identify which parameters are most relevant.<br /></li>
@@ -951,14 +1019,13 @@ Figure 1: Schematic representation of PINN<sup>[<a href="#citeproc_bib_item_15">
 </section>
 </section>
 <section>
-<section id="slide-org076f4a7">
-<h2 id="org076f4a7">Where to go from here</h2>
+<section id="slide-orgb68e5c2">
+<h2 id="orgb68e5c2">Where to go from here</h2>
 <ul>
-<li>Electromagnetic waves<br /></li>
-<li>Optimizing the input waves<br /></li>
-<li>Recurrent architecture (experiment, optimization, simulation, repeat)<br /></li>
-<li>Neural networks to help solve the inverse problem<br /></li>
-<li>Improving the model (viscoporoelastic, electromagnetic)<br /></li>
+<li>Multi-physics: (acoustic and electromagnetic waves)<br /></li>
+<li>Improving the model (viscoporoelastic, non-linear)<br /></li>
+<li>Optimizing the input<br /></li>
+<li>Sequential design (experiment, optimization, simulation, repeat)<br /></li>
 <li>Adaptive mesh refinement<br /></li>
 
 </ul>
@@ -984,12 +1051,14 @@ Figure 1: Schematic representation of PINN<sup>[<a href="#citeproc_bib_item_15">
   <div class="csl-entry"><a id="citeproc_bib_item_14"></a>14. Görtler, J., Kehlbeck, R., &#38; Deussen, O. (2019). A visual exploration of gaussian processes. <i>Distill</i>. <a href="https://doi.org/10.23915/distill.00017">https://doi.org/10.23915/distill.00017</a></div>
   <div class="csl-entry"><a id="citeproc_bib_item_15"></a>15. Ganga, S., &#38; Uddin, Z. (2024). <i>Exploring physics-informed neural networks: From fundamentals to applications in complex systems</i>. <a href="https://arxiv.org/abs/2410.00422">https://arxiv.org/abs/2410.00422</a></div>
   <div class="csl-entry"><a id="citeproc_bib_item_16"></a>16. Khalid, N., Zubair, M., Mehmood, M. Q., &#38; others. (2024). Emerging paradigms in microwave imaging technology for biomedical applications: unleashing the power of artificial intelligence. <i>Npj Imaging</i>, <i>2</i>, 13. <a href="https://doi.org/10.1038/s44303-024-00012-8">https://doi.org/10.1038/s44303-024-00012-8</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_17"></a>17. Raissi, M., Perdikaris, P., &#38; Karniadakis, G. E. (2017). <i>Physics informed deep learning (part i): Data-driven solutions of nonlinear partial differential equations</i>. <a href="https://arxiv.org/abs/1711.10561">https://arxiv.org/abs/1711.10561</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_18"></a>18. Liu, Z., Wang, Y., Vaidya, S., Ruehle, F., Halverson, J., Soljačić, M., Hou, T. Y., &#38; Tegmark, M. (2024). <i>Kan: Kolmogorov-arnold networks</i>. <a href="https://arxiv.org/abs/2404.19756">https://arxiv.org/abs/2404.19756</a></div>
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org77c0a5d">
-<h2 id="org77c0a5d">Available Code</h2>
+<section id="slide-org154e429">
+<h2 id="org154e429">Available Code</h2>
 <ul>
 <li>Project: <a href="https://github.com/lukebodm/model-based-inverse-problem/">https://github.com/lukebodm/model-based-inverse-problem/</a><br /></li>
 <li>Presentation: <a href="https://github.com/lukebodm/oral_qualifying_exam">https://github.com/lukebodm/oral_qualifying_exam</a><br /></li>
