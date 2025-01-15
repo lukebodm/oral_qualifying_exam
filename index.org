@@ -7,7 +7,7 @@
 #+REVEAL_VERSION: 4
 #+REVEAL_EXTRA_CSS: ./custom.css
 #+REVEAL_TITLE_SLIDE: <h1>Affordable, Scalable, Open Source Medical Imaging Technology</h1><h3>%A %a</h3>
-#+REVEAL_EXTRA_OPTIONS: 
+#+REVEAL_EXPORT_NOTES_TO_PDF: separate-page
 #+bibliography: references.bib
 #+cite_export: csl ./citation-style.csl
 #+LATEX_HEADER: \usepackage{tikz}
@@ -22,7 +22,7 @@
 - Where to go from here
   
 * Understanding the Technology 
-#+attr_reveal: :frag t :frag_idx 5
+#+attr_reveal: :frag t :frag_idx 0
 Full Waveform Inversion
 
 #+REVEAL_HTML: <div style="display: grid; grid-template-columns: auto auto;">
@@ -66,7 +66,7 @@ Full Waveform Inversion
 
 * Simulation 
 #+ATTR_HTML: :width 75% :align center
-[[./Ez_animation.gif]]
+[[./images/Ez_animation.gif]]
  #+BEGIN_NOTES
 - Relative epsilon value (permittivity)
 - Relative mu value (permeability)
@@ -127,7 +127,7 @@ We are entering a new era where 3D images, visualizations, and animations will b
 #+BEGIN_SRC python
 import torch
 
-class PinnModel(nn.Module):
+class SimpleModel(nn.Module):
     def __init__(self):
         super(PinnModel, self).__init__()
         # Define layers
@@ -224,7 +224,6 @@ Challenges
 - Ill-posed inverse problem
 - Sensitivity to noise 
 - Computational complexity
-- Resolution
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
 
@@ -596,6 +595,7 @@ Optimization problem
   - Reduced-order models (ROMs)
   - Simplified Physics models
 - These can be combined with GPs and PINNs
+- See Rashetnia paper from 2021: [cite:@Rashetnia2021]
 #+END_NOTES
 
 * Surrogate model: Gaussian Process (GP)

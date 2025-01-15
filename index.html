@@ -21,8 +21,8 @@
 <h1>Affordable, Scalable, Open Source Medical Imaging Technology</h1><h3> Luke Bodmer</h3>
 </section>
 <section>
-<section id="slide-org5b22bc0">
-<h2 id="org5b22bc0">Overview</h2>
+<section id="slide-org476b1e8">
+<h2 id="org476b1e8">Overview</h2>
 <ul>
 <li>Understanding the technology<br /></li>
 <li>Vision for the project<br /></li>
@@ -34,21 +34,21 @@
 </section>
 </section>
 <section>
-<section id="slide-org85ae910">
-<h2 id="org85ae910">Understanding the Technology</h2>
-<p data-fragment-index="5" class="fragment">
+<section id="slide-org6490998">
+<h2 id="org6490998">Understanding the Technology</h2>
+<p data-fragment-index="0" class="fragment">
 Full Waveform Inversion<br />
 </p>
 
 <div style="display: grid; grid-template-columns: auto auto;">
 <div>
 
-<div id="orge92e4fa" class="figure">
+<div id="org99c2b69" class="figure">
 <p><img src="./images/three-main-parts-experiment.png" alt="three-main-parts-experiment.png" data-fragment-index="1" width="100%" align="center" class="fragment" /><br />
 </p>
 </div>
 
-<div id="org40fd269" class="figure">
+<div id="org1f50c7e" class="figure">
 <p><img src="./images/three-main-parts-neural-net.png" alt="three-main-parts-neural-net.png" data-fragment-index="3" width="100%" align="center" class="fragment" /><br />
 </p>
 </div>
@@ -56,13 +56,13 @@ Full Waveform Inversion<br />
 
 <div>
 
-<div id="org76b62dc" class="figure">
+<div id="org1c2a75b" class="figure">
 <p><img src="./images/three-main-parts-simulation.png" alt="three-main-parts-simulation.png" data-fragment-index="2" width="100%" align="center" class="fragment" /><br />
 </p>
 </div>
 
 
-<div id="org75b462b" class="figure">
+<div id="orgcc1e96e" class="figure">
 <p><img src="./images/three-main-parts-optimization.png" alt="three-main-parts-optimization.png" data-fragment-index="4" width="100%" align="center" class="fragment" /><br />
 </p>
 </div>
@@ -89,11 +89,11 @@ Full Waveform Inversion<br />
 </section>
 </section>
 <section>
-<section id="slide-orgf387036">
-<h2 id="orgf387036">Simulation</h2>
+<section id="slide-org97daca8">
+<h2 id="org97daca8">Simulation</h2>
 
-<div id="orgd46724b" class="figure">
-<p><img src="./Ez_animation.gif" alt="Ez_animation.gif" width="75%" align="center" /><br />
+<div id="org9e0d11d" class="figure">
+<p><img src="./images/Ez_animation.gif" alt="Ez_animation.gif" width="75%" align="center" /><br />
 </p>
 </div>
 <aside class="notes">
@@ -105,8 +105,8 @@ Full Waveform Inversion<br />
 
 </aside>
 </section>
-<section id="slide-org9912300">
-<h3 id="org9912300">Importance of Visualization</h3>
+<section id="slide-org8abe982">
+<h3 id="org8abe982">Importance of Visualization</h3>
 <blockquote>
 <p>
 We are entering a new era where 3D images, visualizations, and animations will begin to extend, and in some cases, replace the current communication paradigm based on words, mathematical symbols, and 2D images. Our hope is that along the way the human imagination will be freed like never before."<br />
@@ -116,11 +116,11 @@ We are entering a new era where 3D images, visualizations, and animations will b
 </section>
 </section>
 <section>
-<section id="slide-org9173455">
-<h2 id="org9173455">Simulation</h2>
+<section id="slide-org08a902f">
+<h2 id="org08a902f">Simulation</h2>
 <br>
 
-<div id="org223fcdb" class="figure">
+<div id="org7240e78" class="figure">
 <p><img src="./images/data-visualization.png" alt="data-visualization.png" width="100%" align="center" /><br />
 </p>
 </div>
@@ -134,8 +134,8 @@ We are entering a new era where 3D images, visualizations, and animations will b
 <b>Output</b>: vector length 7020<br />
 </p>
 </section>
-<section id="slide-org0e15a61">
-<h3 id="org0e15a61">Code</h3>
+<section id="slide-orgc693225">
+<h3 id="orgc693225">Code</h3>
 <div class="org-src-container">
 
 <pre class="src src-python"> <span style="color: #81A1C1;">def</span> <span style="color: #88C0D0;">forward_problem</span>(eps_r, mu_r, length, width, plot=<span style="color: #81A1C1;">False</span>):
@@ -164,10 +164,10 @@ We are entering a new era where 3D images, visualizations, and animations will b
 </section>
 </section>
 <section>
-<section id="slide-org9398f70">
-<h2 id="org9398f70">Surrogate Model</h2>
+<section id="slide-orga2b2f2e">
+<h2 id="orga2b2f2e">Surrogate Model</h2>
 
-<div id="orgfdf46b8" class="figure">
+<div id="org1c31851" class="figure">
 <p><img src="./images/neural-net.png" alt="neural-net.png" width="75%" align="center" /><br />
 </p>
 </div>
@@ -181,13 +181,13 @@ We are entering a new era where 3D images, visualizations, and animations will b
 
 </aside>
 </section>
-<section id="slide-org2eda4e0">
-<h3 id="org2eda4e0">Code</h3>
+<section id="slide-orge94b240">
+<h3 id="orge94b240">Code</h3>
 <div class="org-src-container">
 
 <pre class="src src-python"><span style="color: #81A1C1;">import</span> torch
 
-<span style="color: #81A1C1;">class</span> <span style="color: #8FBCBB;">PinnModel</span>(nn.Module):
+<span style="color: #81A1C1;">class</span> <span style="color: #8FBCBB;">SimpleModel</span>(nn.Module):
     <span style="color: #81A1C1;">def</span> <span style="color: #88C0D0;">__init__</span>(<span style="color: #81A1C1;">self</span>):
         <span style="color: #81A1C1;">super</span>(PinnModel, <span style="color: #81A1C1;">self</span>).__init__()
         <span style="color: #6f7787;"># </span><span style="color: #6f7787;">Define layers</span>
@@ -208,8 +208,8 @@ We are entering a new era where 3D images, visualizations, and animations will b
 </section>
 </section>
 <section>
-<section id="slide-orgd40bc11">
-<h2 id="orgd40bc11">Optimization</h2>
+<section id="slide-org16ba87c">
+<h2 id="org16ba87c">Optimization</h2>
 <p width="75%" align="center">
 <img src="./images/optimization.png" alt="optimization.png" width="75%" align="center" /><br />
 Gradient descent least-squares method to optimize the objective function: \(f(m) = \frac{1}{2} \| \text{experimental data} - \text{simulated data} \|_2^2\)<br />
@@ -224,8 +224,8 @@ Gradient descent least-squares method to optimize the objective function: \(f(m)
 </section>
 </section>
 <section>
-<section id="slide-org8e2c4fb">
-<h2 id="org8e2c4fb">Vision for the Project</h2>
+<section id="slide-org7f47597">
+<h2 id="org7f47597">Vision for the Project</h2>
 <div style="display: grid; grid-template-columns: auto auto;">
 <div style="font-size: 0.7em; display: grid; grid-template-columns: auto auto; align-items: center;">
 <div>
@@ -285,7 +285,7 @@ Runs on a laptop in the middle of the Congo<br />
 </div>
 <div>
 
-<div id="org91ff807" class="figure">
+<div id="org81eb9d6" class="figure">
 <p><img src="./images/ai-visions.png" alt="ai-visions.png" width="65%" align="center" /><br />
 </p>
 </div>
@@ -304,8 +304,8 @@ Runs on a laptop in the middle of the Congo<br />
 </section>
 </section>
 <section>
-<section id="slide-orgb053dbb">
-<h2 id="orgb053dbb"></h2>
+<section id="slide-org9d1d4a8">
+<h2 id="org9d1d4a8"></h2>
 <div style="display: grid; grid-template-columns: auto auto;">
 <div>
 <h2>
@@ -331,7 +331,6 @@ Challenges<br />
 <li>Ill-posed inverse problem<br /></li>
 <li>Sensitivity to noise<br /></li>
 <li>Computational complexity<br /></li>
-<li>Resolution<br /></li>
 
 </ul>
 </div>
@@ -339,10 +338,10 @@ Challenges<br />
 </section>
 </section>
 <section>
-<section id="slide-org33b9a05">
-<h2 id="org33b9a05">What are other people doing?</h2>
+<section id="slide-org1859849">
+<h2 id="org1859849">What are other people doing?</h2>
 
-<div id="orgaa438be" class="figure">
+<div id="org2ffb6e6" class="figure">
 <p><img src="./images/timeline.png" alt="timeline.png" width="75%" align="center" /><br />
 </p>
 </div>
@@ -365,15 +364,15 @@ Challenges<br />
 
 </aside>
 </section>
-<section id="slide-org79fd3e7">
-<h3 id="org79fd3e7">Full-Waveform Inversion Imaging of the Human Brain</h3>
+<section id="slide-org33e9b48">
+<h3 id="org33e9b48">Full-Waveform Inversion Imaging of the Human Brain</h3>
 <small>
 <p>
 Guasch, Lluis, Oscar Calderón Agudo, et al. <b>2020</b>. Npj Digital Medicine<br />
 </p>
 </small>
 
-<div id="org4ad7c7a" class="figure">
+<div id="org5173178" class="figure">
 <p><img src="./images/guasch-fwi.png" alt="guasch-fwi.png" width="75%" align="center" /><br />
 </p>
 </div>
@@ -386,15 +385,15 @@ Guasch, Lluis, Oscar Calderón Agudo, et al. <b>2020</b>. Npj Digital Medicine<b
 
 </aside>
 </section>
-<section id="slide-org8d65e00">
-<h3 id="org8d65e00">Human Brain Imaging by Electromagnetic Tomography: A Mobile Brain Scanner for Clinical Settings</h3>
+<section id="slide-orgceaf165">
+<h3 id="orgceaf165">Human Brain Imaging by Electromagnetic Tomography: A Mobile Brain Scanner for Clinical Settings</h3>
 <small>
 <p>
 Henriksson, Tommy, Sahar Sahebdivan, et al. <b>2022</b>.  16th European Conference on Antennas and Propagation (EuCAP)<br />
 </p>
 </small>
 
-<div id="org1569a48" class="figure">
+<div id="orga4c7a78" class="figure">
 <p><img src="./images/henriksson-emerging-paradigms.png" alt="henriksson-emerging-paradigms.png" width="75%" align="center" /><br />
 </p>
 </div>
@@ -417,15 +416,15 @@ Henriksson, Tommy, Sahar Sahebdivan, et al. <b>2022</b>.  16th European Conferen
 
 </aside>
 </section>
-<section id="slide-org7f6c7ba">
-<h3 id="org7f6c7ba">Dual-Probe Transcranial Full-Waveform Inversion: A Brain Phantom Feasibility Study</h3>
+<section id="slide-org941a952">
+<h3 id="org941a952">Dual-Probe Transcranial Full-Waveform Inversion: A Brain Phantom Feasibility Study</h3>
 <small>
 <p>
 Robins, T. C., C. Cueto,  L. Guasch, et al. <b>2023</b>. Ultrasound in Medicine &amp; Biology<br />
 </p>
 </small>
 
-<div id="org19e6a4a" class="figure">
+<div id="orgb15f6b2" class="figure">
 <p><img src="./images/robins-dual-probe.png" alt="robins-dual-probe.png" width="75%" align="center" /><br />
 </p>
 </div>
@@ -445,8 +444,8 @@ Robins, T. C., C. Cueto,  L. Guasch, et al. <b>2023</b>. Ultrasound in Medicine 
 </section>
 </section>
 <section>
-<section id="slide-orgca573c4">
-<h2 id="orgca573c4">What have I done so far?</h2>
+<section id="slide-org71e66d2">
+<h2 id="org71e66d2">What have I done so far?</h2>
 <ul>
 <li>Simulation - <i>Finite Different Time Domain (FDTD)</i><br /></li>
 <li>Surrogate model - <i>Simple five layer neural network</i><br /></li>
@@ -456,13 +455,13 @@ Robins, T. C., C. Cueto,  L. Guasch, et al. <b>2023</b>. Ultrasound in Medicine 
 </section>
 </section>
 <section>
-<section id="slide-org3704dd1">
-<h2 id="org3704dd1">Simulation Method: Finite Difference Time Domain (FDTD) Method</h2>
-<div class="outline-text-2" id="text-org3704dd1">
+<section id="slide-org5696693">
+<h2 id="org5696693">Simulation Method: Finite Difference Time Domain (FDTD) Method</h2>
+<div class="outline-text-2" id="text-org5696693">
 </div>
 </section>
-<section id="slide-orge3718de">
-<h3 id="orge3718de">Maxwell's equations</h3>
+<section id="slide-org31828a7">
+<h3 id="org31828a7">Maxwell's equations</h3>
 <div>
 \begin{align*}
 \nabla \times \vec{H} &= \frac{\partial \vec{D}}{\partial t} + \vec{J}, \\
@@ -492,8 +491,8 @@ Robins, T. C., C. Cueto,  L. Guasch, et al. <b>2023</b>. Ultrasound in Medicine 
 
 </aside>
 </section>
-<section id="slide-orgcadae6a">
-<h3 id="orgcadae6a">Maxwell's curl equations</h3>
+<section id="slide-orga456086">
+<h3 id="orga456086">Maxwell's curl equations</h3>
 <div>
 \begin{align*}
 \vec{J} = \vec{J}_c &+ \vec{J}_i \quad \quad  \vec{J}_c = \sigma^e \vec{E} \\
@@ -528,8 +527,8 @@ Robins, T. C., C. Cueto,  L. Guasch, et al. <b>2023</b>. Ultrasound in Medicine 
 
 </aside>
 </section>
-<section id="slide-org1c5cdb6">
-<h3 id="org1c5cdb6">FDTD updating equation for 2D problems</h3>
+<section id="slide-orgb950cd8">
+<h3 id="orgb950cd8">FDTD updating equation for 2D problems</h3>
 <p>
 \[\small
 \begin{align*}
@@ -569,8 +568,8 @@ Robins, T. C., C. Cueto,  L. Guasch, et al. <b>2023</b>. Ultrasound in Medicine 
 
 </aside>
 </section>
-<section id="slide-org8633cb7">
-<h3 id="org8633cb7">Second order accurate central difference formula</h3>
+<section id="slide-orgb3523bb">
+<h3 id="orgb3523bb">Second order accurate central difference formula</h3>
 <div>
 \begin{equation*}
 f'(x) = \frac{f(x + \Delta x) - f(x - \Delta x)}{2 \Delta x} + O((\Delta x)^2)
@@ -578,8 +577,8 @@ f'(x) = \frac{f(x + \Delta x) - f(x - \Delta x)}{2 \Delta x} + O((\Delta x)^2)
 
 </div>
 </section>
-<section id="slide-org5a0a275">
-<h3 id="org5a0a275">Grid and timestepping</h3>
+<section id="slide-org7ce97df">
+<h3 id="org7ce97df">Grid and timestepping</h3>
 <div style="display: grid; grid-template-columns: auto auto; align-items: center;">
 <div>
 <p>
@@ -608,14 +607,14 @@ H_y^{(n+1/2)}(i,j) &= C_{hyh}(i,j) \cdot H_y^{(n-1/2)}(i,j) \\
 </section>
 </section>
 <section>
-<section id="slide-org2734114">
-<h2 id="org2734114">Results</h2>
+<section id="slide-orgf97ff9c">
+<h2 id="orgf97ff9c">Results</h2>
 
 </section>
 </section>
 <section>
-<section id="slide-orgf6169bb">
-<h2 id="orgf6169bb">What problems did I face?</h2>
+<section id="slide-org9a11b6b">
+<h2 id="org9a11b6b">What problems did I face?</h2>
 <ul>
 <li>Managing complexity<br /></li>
 <li>Finding good dependencies<br /></li>
@@ -626,8 +625,8 @@ H_y^{(n+1/2)}(i,j) &= C_{hyh}(i,j) \cdot H_y^{(n-1/2)}(i,j) \\
 </section>
 </section>
 <section>
-<section id="slide-org1fc0871">
-<h2 id="org1fc0871">What makes a good dependency?</h2>
+<section id="slide-orgc545a2b">
+<h2 id="orgc545a2b">What makes a good dependency?</h2>
 <div style="display: grid; grid-template-columns: auto auto; align-items: center;">
 <div>
 <ul>
@@ -643,12 +642,12 @@ H_y^{(n+1/2)}(i,j) &= C_{hyh}(i,j) \cdot H_y^{(n-1/2)}(i,j) \\
 <div>
 <div class="r-stack">
 
-<div id="org4fc6669" class="figure">
+<div id="org5feaf30" class="figure">
 <p><img src="./images/bad-dependencies.png" alt="bad-dependencies.png" data-fragment-index="0" class="fragment fade-out" /><br />
 </p>
 </div>
 
-<div id="orgfab9cb6" class="figure">
+<div id="orgf1ff7f5" class="figure">
 <p><img src="./images/good-dependencies.png" alt="good-dependencies.png" data-fragment-index="0" class="fragment fade-in" /><br />
 </p>
 </div>
@@ -663,8 +662,8 @@ H_y^{(n+1/2)}(i,j) &= C_{hyh}(i,j) \cdot H_y^{(n-1/2)}(i,j) \\
 
 </aside>
 </section>
-<section id="slide-org7e63c86">
-<h3 id="org7e63c86">Creating a Development Environment</h3>
+<section id="slide-org08556d5">
+<h3 id="org08556d5">Creating a Development Environment</h3>
 <div style="display: grid; grid-template-columns: auto auto; align-items: center;">
 <div>
 <ul>
@@ -676,15 +675,15 @@ H_y^{(n+1/2)}(i,j) &= C_{hyh}(i,j) \cdot H_y^{(n-1/2)}(i,j) \\
 </div>
 <div>
 
-<div id="org84b4e24" class="figure">
+<div id="org69adab4" class="figure">
 <p><img src="./images/dev-environment.png" alt="dev-environment.png" /><br />
 </p>
 </div>
 </div>
 </div>
 </section>
-<section id="slide-org7d1a93a">
-<h3 id="org7d1a93a">Design Strategies</h3>
+<section id="slide-org2d10215">
+<h3 id="org2d10215">Design Strategies</h3>
 <blockquote>
 <p>
 "Do the simplest thing that could possibly work"<br />
@@ -713,13 +712,13 @@ Ron Jeffries is one of the three founders of Extreme Programming (XP) Software d
 </section>
 </section>
 <section>
-<section id="slide-org0990fd1">
-<h2 id="org0990fd1">Where do we go from here?</h2>
+<section id="slide-orgb3094fc">
+<h2 id="orgb3094fc">Where do we go from here?</h2>
 </section>
 </section>
 <section>
-<section id="slide-org6583f2e">
-<h2 id="org6583f2e">Decisions to be made for the forward problem</h2>
+<section id="slide-org9fc8adb">
+<h2 id="org9fc8adb">Decisions to be made for the forward problem</h2>
 <br>
 <div style="display: grid; grid-template-columns: auto auto auto;">
 <div>
@@ -773,13 +772,13 @@ See Steven Vandekerckhove's 2016 PhD thesis: <i>Simulation of wave propagation p
 
 </aside>
 </section>
-<section id="slide-org1ab6d2c" data-background-iframe="https://defelement.org/elements/index.html">
-<h3 id="org1ab6d2c"></h3>
+<section id="slide-org335a44f" data-background-iframe="https://defelement.org/elements/index.html">
+<h3 id="org335a44f"></h3>
 </section>
 </section>
 <section>
-<section id="slide-org6465ec7">
-<h2 id="org6465ec7">Simulation Method: Discontinuous Galerkin (DG) Method</h2>
+<section id="slide-org789698c">
+<h2 id="org789698c">Simulation Method: Discontinuous Galerkin (DG) Method</h2>
 <ul>
 <li>Write down the governing equations.<br /></li>
 <li>Decide on basis functions that you will use to represent the solution.<br /></li>
@@ -806,8 +805,8 @@ See<sup>[<a href="#citeproc_bib_item_12">12</a>]</sup><sup>[<a href="#citeproc_b
 
 </aside>
 </section>
-<section id="slide-org3a5cd65">
-<h3 id="org3a5cd65">Math - DG method with a perfectly matched layer</h3>
+<section id="slide-orgf4de1dc">
+<h3 id="orgf4de1dc">Math - DG method with a perfectly matched layer</h3>
 <p>
 \[\tiny
 \begin{align*}
@@ -823,8 +822,8 @@ See<sup>[<a href="#citeproc_bib_item_12">12</a>]</sup><sup>[<a href="#citeproc_b
 \end{align*}\]<br />
 </p>
 </section>
-<section id="slide-org4508edf">
-<h3 id="org4508edf">Integration by parts</h3>
+<section id="slide-org793bb10">
+<h3 id="org793bb10">Integration by parts</h3>
 <div>
 \begin{equation*}
 \int_{K_i} (\nabla \cdot \mathbf{F}) \cdot l \, dV = \int_{\partial K_i} \left( \mathbf{F} \cdot \mathbf{n} \right) \cdot l \, dS - \int_{K_i} \mathbf{F} \cdot \nabla l \, dV
@@ -834,8 +833,8 @@ See<sup>[<a href="#citeproc_bib_item_12">12</a>]</sup><sup>[<a href="#citeproc_b
 </section>
 </section>
 <section>
-<section id="slide-org64572ce">
-<h2 id="org64572ce">Decisions to be made for the Inverse Problem</h2>
+<section id="slide-orgfd3887f">
+<h2 id="orgfd3887f">Decisions to be made for the Inverse Problem</h2>
 <div style="display: grid; grid-template-columns: auto auto auto;">
 <div>
 <br>
@@ -887,6 +886,7 @@ Optimization problem<br />
 
 </ul></li>
 <li>These can be combined with GPs and PINNs<br /></li>
+<li>See Rashetnia paper from 2021:<sup>[<a href="#citeproc_bib_item_15">15</a>]</sup><br /></li>
 
 </ul>
 
@@ -894,8 +894,8 @@ Optimization problem<br />
 </section>
 </section>
 <section>
-<section id="slide-orga0f4bf1">
-<h2 id="orga0f4bf1">Surrogate model: Gaussian Process (GP)</h2>
+<section id="slide-org51bdb30">
+<h2 id="org51bdb30">Surrogate model: Gaussian Process (GP)</h2>
 <div style="display: grid; grid-template-columns: 50% 50%; align-items: center;">
 <div style="font-size: 0.8em;">
 <ul>
@@ -903,13 +903,13 @@ Optimization problem<br />
 <li>Determined by their mean and covariance functions.<br /></li>
 <li>The covariance matrix, &Sigma;, ultimately determines the characteristics of the function that we want to predict.<br /></li>
 <li>Since the covariance matrix describes the similarity between the values of our function, it controls the possible shape that a fitted function can adopt.<br /></li>
-<li>The covariance matrix is created by evaluating a <i>covariance function k</i>, also called a <i>kernel</i>, using the training data.<sup>[<a href="#citeproc_bib_item_15">15</a>]</sup><br /></li>
+<li>The covariance matrix is created by evaluating a <i>covariance function k</i>, also called a <i>kernel</i>, using the training data.<sup>[<a href="#citeproc_bib_item_16">16</a>]</sup><br /></li>
 
 </ul>
 </div>
 <div>
 
-<div id="orgf92344f" class="figure">
+<div id="org1cbb776" class="figure">
 <p><img src="./images/gaussian-process.png" alt="gaussian-process.png" /><br />
 </p>
 </div>
@@ -922,7 +922,7 @@ Optimization problem<br />
 
 <aside class="notes">
 <ul>
-<li>Probabilistic method that gives a confidence interval for the predicted function<sup>[<a href="#citeproc_bib_item_15">15</a>]</sup><br /></li>
+<li>Probabilistic method that gives a confidence interval for the predicted function<sup>[<a href="#citeproc_bib_item_16">16</a>]</sup><br /></li>
 <li><b>Nonparametric regression</b> does not assume a specific functional form for the relationship between the dependent variable (response) and independent variable(s) (predictors)<br /></li>
 
 </ul>
@@ -931,16 +931,16 @@ Optimization problem<br />
 </section>
 </section>
 <section>
-<section id="slide-orgab5d3a0">
-<h2 id="orgab5d3a0">Surrogate model: Physics Informed Neural Network (PINN)</h2>
+<section id="slide-org5c38442">
+<h2 id="org5c38442">Surrogate model: Physics Informed Neural Network (PINN)</h2>
 <p>
 <img src="./images/pinn-architecture.png" alt="pinn-architecture.png" /><br />
-Figure 1: Schematic representation of PINN<sup>[<a href="#citeproc_bib_item_16">16</a>]</sup><br />
+Figure 1: Schematic representation of PINN<sup>[<a href="#citeproc_bib_item_17">17</a>]</sup><br />
 </p>
 <aside class="notes">
 <ul>
-<li>Exciting use in medical imaing, See<sup>[<a href="#citeproc_bib_item_17">17</a>]</sup><br /></li>
-<li>First use of PINNs, 2017 Maziar Raissi, Paris Perdikaris, George Em Karniadakis<sup>[<a href="#citeproc_bib_item_18">18</a>]</sup><br /></li>
+<li>Exciting use in medical imaing, See<sup>[<a href="#citeproc_bib_item_18">18</a>]</sup><br /></li>
+<li>First use of PINNs, 2017 Maziar Raissi, Paris Perdikaris, George Em Karniadakis<sup>[<a href="#citeproc_bib_item_19">19</a>]</sup><br /></li>
 
 </ul>
 
@@ -948,8 +948,8 @@ Figure 1: Schematic representation of PINN<sup>[<a href="#citeproc_bib_item_16">
 </section>
 </section>
 <section>
-<section id="slide-org7b54215">
-<h2 id="org7b54215">Surrogate model: Kolmogorov-Arnold Network (KAN)</h2>
+<section id="slide-org5bf649c">
+<h2 id="org5bf649c">Surrogate model: Kolmogorov-Arnold Network (KAN)</h2>
 <br>
 <table border="1" cellspacing="0" cellpadding="6" rules="all" frame="hsides">
 
@@ -989,7 +989,7 @@ Figure 1: Schematic representation of PINN<sup>[<a href="#citeproc_bib_item_16">
 
 <aside class="notes">
 <ul>
-<li>2024 Ziming Liu, Yixuan Wang, Sachin Vaidya, Fabian Ruehle, James Halverson, Marin Soljačić, Thomas Y. Hou, Max Tegmark<sup>[<a href="#citeproc_bib_item_19">19</a>]</sup><br /></li>
+<li>2024 Ziming Liu, Yixuan Wang, Sachin Vaidya, Fabian Ruehle, James Halverson, Marin Soljačić, Thomas Y. Hou, Max Tegmark<sup>[<a href="#citeproc_bib_item_20">20</a>]</sup><br /></li>
 <li>Make each edge between neurons a learnable B-spline activation function.<br /></li>
 <li>Any multivariate function <i>f</i> can be expressed as a finite composition of continuous functions of a single variable.<br /></li>
 <li>\(f(x_1, \ldots, x_n) = \sum_{q=1}^{2n+1} \Phi_q \left( \sum_{p=1}^n \phi_{q,p} \, x_p \right)\) where \(f(x_1,\ldots, x_n)\) is a multivariate function, \(\phi_{q,p}(x_p)\) are the univariate functions, and \(\Phi_q\) combines the univariate functions.<br /></li>
@@ -998,23 +998,23 @@ Figure 1: Schematic representation of PINN<sup>[<a href="#citeproc_bib_item_16">
 
 </aside>
 </section>
-<section id="slide-org419b388">
-<h3 id="org419b388">Visualization</h3>
+<section id="slide-org3e0f2af">
+<h3 id="org3e0f2af">Visualization</h3>
 
-<div id="org7af2c0f" class="figure">
+<div id="org4fae35d" class="figure">
 <p><img src="./images/kan-classification.gif" alt="kan-classification.gif" /><br />
 </p>
 </div>
 <small>
 <p>
-Gif from Daniel Bethell's blog<sup>[<a href="#citeproc_bib_item_20">20</a>]</sup><br />
+Gif from Daniel Bethell's blog<sup>[<a href="#citeproc_bib_item_21">21</a>]</sup><br />
 </p>
 </small>
 </section>
 </section>
 <section>
-<section id="slide-orgd64bea9">
-<h2 id="orgd64bea9">Optimization problem: Markov Chain Monte Carlo (MCMC)</h2>
+<section id="slide-orgab944d1">
+<h2 id="orgab944d1">Optimization problem: Markov Chain Monte Carlo (MCMC)</h2>
 <ul>
 <li>Sampling method for exploring complex, high-dimensional spaces.<br /></li>
 <li>Identify which parameters are most relevant.<br /></li>
@@ -1025,8 +1025,8 @@ Gif from Daniel Bethell's blog<sup>[<a href="#citeproc_bib_item_20">20</a>]</sup
 </section>
 </section>
 <section>
-<section id="slide-org17a9876">
-<h2 id="org17a9876">Where to go from here</h2>
+<section id="slide-org42b5706">
+<h2 id="org42b5706">Where to go from here</h2>
 <ul>
 <li>Multi-physics: (acoustic and electromagnetic waves)<br /></li>
 <li>Improving the model (viscoporoelastic, non-linear)<br /></li>
@@ -1055,18 +1055,19 @@ Gif from Daniel Bethell's blog<sup>[<a href="#citeproc_bib_item_20">20</a>]</sup
   <div class="csl-entry"><a id="citeproc_bib_item_12"></a>12. Zanotti, O., Fambri, F., Dumbser, M., &#38; Hidalgo, A. (2015). Space–time adaptive ader discontinuous galerkin finite element schemes with a posteriori sub-cell finite volume limiting. <i>Computers and Fluids</i>, <i>118</i>, 204–224. <a href="https://doi.org/10.1016/j.compfluid.2015.06.020">https://doi.org/10.1016/j.compfluid.2015.06.020</a></div>
   <div class="csl-entry"><a id="citeproc_bib_item_13"></a>13. Dumbser, M., &#38; Käser, M. (2006). An arbitrary high-order discontinuous galerkin method for elastic waves on unstructured meshes - ii. the three-dimensional isotropic case. <i>Geophysical Journal International</i>, <i>167</i>(1), 319–336. <a href="https://doi.org/10.1111/j.1365-246x.2006.03120.x">https://doi.org/10.1111/j.1365-246x.2006.03120.x</a></div>
   <div class="csl-entry"><a id="citeproc_bib_item_14"></a>14. Busto, S., Chiocchetti, S., Dumbser, M., Gaburro, E., &#38; Peshkov, I. (2020). High order ader schemes for continuum mechanics. <i>Frontiers in Physics</i>, <i>8</i>. <a href="https://doi.org/10.3389/fphy.2020.00032">https://doi.org/10.3389/fphy.2020.00032</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_15"></a>15. Görtler, J., Kehlbeck, R., &#38; Deussen, O. (2019). A visual exploration of gaussian processes. <i>Distill</i>. <a href="https://doi.org/10.23915/distill.00017">https://doi.org/10.23915/distill.00017</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_16"></a>16. Ganga, S., &#38; Uddin, Z. (2024). <i>Exploring physics-informed neural networks: From fundamentals to applications in complex systems</i>. <a href="https://arxiv.org/abs/2410.00422">https://arxiv.org/abs/2410.00422</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_17"></a>17. Khalid, N., Zubair, M., Mehmood, M. Q., &#38; others. (2024). Emerging paradigms in microwave imaging technology for biomedical applications: unleashing the power of artificial intelligence. <i>Npj Imaging</i>, <i>2</i>, 13. <a href="https://doi.org/10.1038/s44303-024-00012-8">https://doi.org/10.1038/s44303-024-00012-8</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_18"></a>18. Raissi, M., Perdikaris, P., &#38; Karniadakis, G. E. (2017). <i>Physics informed deep learning (part i): Data-driven solutions of nonlinear partial differential equations</i>. <a href="https://arxiv.org/abs/1711.10561">https://arxiv.org/abs/1711.10561</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_19"></a>19. Liu, Z., Wang, Y., Vaidya, S., Ruehle, F., Halverson, J., Soljačić, M., Hou, T. Y., &#38; Tegmark, M. (2024). <i>Kan: Kolmogorov-arnold networks</i>. <a href="https://arxiv.org/abs/2404.19756">https://arxiv.org/abs/2404.19756</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_20"></a>20. Bethell, D. (2024). <i>Demystifying kolmogorov-arnold networks: A beginner-friendly guide with code</i>. https://daniel-bethell.co.uk/posts/kan/.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_15"></a>15. Rashetnia, R., &#38; Pour-Ghaz, M. (2021). Deep learning surrogate interacting markov chain monte carlo based full wave inversion scheme for properties of materials quantification. <i>Journal of Sound and Vibration</i>, <i>497</i>, 115934. <a href="https://doi.org/https://doi.org/10.1016/j.jsv.2021.115934">https://doi.org/https://doi.org/10.1016/j.jsv.2021.115934</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_16"></a>16. Görtler, J., Kehlbeck, R., &#38; Deussen, O. (2019). A visual exploration of gaussian processes. <i>Distill</i>. <a href="https://doi.org/10.23915/distill.00017">https://doi.org/10.23915/distill.00017</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_17"></a>17. Ganga, S., &#38; Uddin, Z. (2024). <i>Exploring physics-informed neural networks: From fundamentals to applications in complex systems</i>. <a href="https://arxiv.org/abs/2410.00422">https://arxiv.org/abs/2410.00422</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_18"></a>18. Khalid, N., Zubair, M., Mehmood, M. Q., &#38; others. (2024). Emerging paradigms in microwave imaging technology for biomedical applications: unleashing the power of artificial intelligence. <i>Npj Imaging</i>, <i>2</i>, 13. <a href="https://doi.org/10.1038/s44303-024-00012-8">https://doi.org/10.1038/s44303-024-00012-8</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_19"></a>19. Raissi, M., Perdikaris, P., &#38; Karniadakis, G. E. (2017). <i>Physics informed deep learning (part i): Data-driven solutions of nonlinear partial differential equations</i>. <a href="https://arxiv.org/abs/1711.10561">https://arxiv.org/abs/1711.10561</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_20"></a>20. Liu, Z., Wang, Y., Vaidya, S., Ruehle, F., Halverson, J., Soljačić, M., Hou, T. Y., &#38; Tegmark, M. (2024). <i>Kan: Kolmogorov-arnold networks</i>. <a href="https://arxiv.org/abs/2404.19756">https://arxiv.org/abs/2404.19756</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_21"></a>21. Bethell, D. (2024). <i>Demystifying kolmogorov-arnold networks: A beginner-friendly guide with code</i>. https://daniel-bethell.co.uk/posts/kan/.</div>
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org8bdbeac">
-<h2 id="org8bdbeac">Available Code</h2>
+<section id="slide-org6e8b137">
+<h2 id="org6e8b137">Available Code</h2>
 <ul>
 <li>Project: <a href="https://github.com/lukebodm/model-based-inverse-problem/">https://github.com/lukebodm/model-based-inverse-problem/</a><br /></li>
 <li>Presentation: <a href="https://github.com/lukebodm/oral_qualifying_exam">https://github.com/lukebodm/oral_qualifying_exam</a><br /></li>
@@ -1103,6 +1104,7 @@ height: 1000,
 
 transition: 'slide',
 transitionSpeed: 'default',
+showNotes: window.location.search.match( /print-pdf/gi ) ? 'separate-page' : false,
 
 // Plugins with reveal.js 4.x
 plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom ],
