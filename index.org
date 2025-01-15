@@ -659,17 +659,17 @@ Gif from Daniel Bethell's blog [cite:@Bethell2024]
 #+REVEAL_HTML: </small>
 
 * Optimization problem: Markov Chain Monte Carlo (MCMC)
-- Sampling method for exploring complex, high-dimensional spaces.
-- Identify which parameters are most relevant.
-- Often used with Gaussian Processes.
-- Can be used with Gradient Descent to explore parameter space.
-
+[[./images/mcmc.png]]
+#+REVEAL_HTML: <small>
+ /Deep learning surrogate interacting Markov chain Monte Carlo based full wave inversion scheme for properties of materials quantification/ Rashetnia et al., 2021  [cite:@Rashetnia2021]
+#+REVEAL_HTML: </small>
+  
 * Where to go from here
-- Multi-physics: (acoustic and electromagnetic waves)
-- Improving the model (viscoporoelastic, non-linear)
-- Optimizing the input
-- Sequential design (experiment, optimization, simulation, repeat) 
-- Adaptive mesh refinement 
+- Multi-physics - acoustic and electromagnetic waves
+- Improving the model - viscoporoelastic, non-linear, heat dissipation, anisometric material
+- Adaptive mesh refinement - /h/ and /p/ refinement
+- Optimizing the input - creating pulse sequences
+- Sequential design- experiment, optimization, simulation, repeat 
   
 * Bibliography
 :PROPERTIES:

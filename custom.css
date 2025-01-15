@@ -75,10 +75,11 @@ td { width: 50%};
 
 .reveal ul {
   list-style-type: none; /* Remove default bullet */
-
+  text-indent: -0.8em;  /* indent for second line of long bullet sentence */
 }
+
 ul {
-    list-style-type: none; /* Remove default bullet */
+  list-style-type: none; /* Remove default bullet */
 }
 .reveal ul li::before {
     content: "•"; /* Custom bullet */
