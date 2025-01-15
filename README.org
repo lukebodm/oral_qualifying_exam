@@ -7,7 +7,7 @@ This presentation was created using [[https://gitlab.com/oer/org-re-reveal][org-
 
 The main file that I edit is the ~index.org~ file. This file is automatically compiled into the ~index.html~ file.
 
-~custom.css~ is for adding my own css on top of the ~reveal.js~ styles. This is compiled into the custom.html file.
+~custom.css~ is for adding my own css on top of the ~reveal.js~ styles.
 
 ~references.bib~ contains the BibTeX entries for my bibliography, and ~citation-styles.csl~ is for formatting my citation styles.  
 
