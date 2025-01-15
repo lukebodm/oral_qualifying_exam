@@ -205,6 +205,9 @@ Runs on a laptop in the middle of the Congo
 #+BEGIN_NOTES
 - For statistics on the accessibility of MRI, see [cite:@Makin2021]
 - Laptop text could read: /Ischemic stroke in the left middle cerebral artery (MCA), primarily affecting the frontal lobe./
+- Less than one MRI scanner per million people across Sub-Saharan Africa (United States has 37.99)
+- 6 countries in West Africa reported having zero MRI machines.
+- 39% were obsolete low-field systems (Anazodo 2023) [cite:@Anazodo2023]
 #+END_NOTES
 * 
 #+REVEAL_HTML: <div style="display: grid; grid-template-columns: auto auto;">
