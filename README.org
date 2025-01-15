@@ -11,3 +11,5 @@ The main file that I edit is the ~index.org~ file. This file is automatically co
 
 ~references.bib~ contains the BibTeX entries for my bibliography, and ~citation-styles.csl~ is for formatting my citation styles.  
 
+The ~images/~ folder contains all the ~.png~ files that I created in [[https://inkscape.org/][inkscape]] for the presentation.
+
