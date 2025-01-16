@@ -250,7 +250,7 @@ Challenges
 
 ** Full-Waveform Inversion Imaging of the Human Brain
 #+REVEAL_HTML: <small>
-Guasch, Lluis, Oscar Calderón Agudo, et al. *2020*. Npj Digital Medicine
+Guasch, Lluis, Oscar Calderón Agudo, et al. *2020*. Npj Digital Medicine [cite:@Guasch2020]
 #+REVEAL_HTML: </small>
 #+ATTR_HTML: :width 75% :align center
 [[./images/guasch-fwi.png]]
@@ -261,7 +261,7 @@ Guasch, Lluis, Oscar Calderón Agudo, et al. *2020*. Npj Digital Medicine
 
 ** Human Brain Imaging by Electromagnetic Tomography: A Mobile Brain Scanner for Clinical Settings
 #+REVEAL_HTML: <small>
-Henriksson, Tommy, Sahar Sahebdivan, et al. *2022*.  16th European Conference on Antennas and Propagation (EuCAP)
+Henriksson, Tommy, Sahar Sahebdivan, et al. *2022*.  16th European Conference on Antennas and Propagation (EuCAP) [cite:@Henriksson2022]
 #+REVEAL_HTML: </small>
 #+ATTR_HTML: :width 75% :align center
 [[./images/henriksson-emerging-paradigms.png]]
@@ -282,7 +282,7 @@ Henriksson, Tommy, Sahar Sahebdivan, et al. *2022*.  16th European Conference on
 
 ** Dual-Probe Transcranial Full-Waveform Inversion: A Brain Phantom Feasibility Study
 #+REVEAL_HTML: <small>
-Robins, T. C., C. Cueto,  L. Guasch, et al. *2023*. Ultrasound in Medicine & Biology
+Robins, T. C., C. Cueto,  L. Guasch, et al. *2023*. Ultrasound in Medicine & Biology  [cite:@Robins2023]
 #+REVEAL_HTML: </small>
 #+ATTR_HTML: :width 75% :align center
 [[./images/robins-dual-probe.png]]
@@ -625,7 +625,9 @@ Optimization problem
 
 * Surrogate model: Physics Informed Neural Network (PINN)
 [[./images/pinn-architecture.png]]
-Figure 1: Schematic representation of PINN  [cite:@Ganga2024]
+#+REVEAL_HTML: <small>
+Figure 1: Schematic representation of PINN. (/Ganga, S et al., 2024/)  [cite:@Ganga2024]
+#+REVEAL_HTML: </small>
 #+BEGIN_NOTES
 - Exciting use in medical imaing, See [cite:@Khalid2024]
 - First use of PINNs, 2017 Maziar Raissi, Paris Perdikaris, George Em Karniadakis [cite:@Raissi2017]
